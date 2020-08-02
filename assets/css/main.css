@@ -123,12 +123,44 @@ input, select, textarea {
 		border-color: transparent;
 	}
 
-	img.rspnsv {
+	#rspnsv {
+		margin: 0;
+		padding: 0;
+	}
+	
+	#rspnsv img {
 		min-height: 70px;
 		max-height: 193px;
 		width: auto;
 		height: 20vh;
 	}
+
+	#rspnsv img {
+
+	}
+
+	@keyframes flicker {
+		0%, 19.599%, 23%, 63%, 64.599%, 68%, 100% {
+			//text-shadow: none;
+		opacity: .0;
+
+		}
+		20%, 21.599%, 64%, 65%, 66.599% {
+			opacity: 1;
+		}
+	}
+
+	#rspnsv img.head {
+		-webkit-transform: translateX(51%);
+    	transform: translateX(51%);
+	}
+
+	#rspnsv img.blink {
+		-webkit-transform: translateX(-51%);
+    	transform: translateX(-51%);
+		animation: flicker 8s linear infinite;
+	}
+
 
 /* Icon */
 
@@ -574,7 +606,7 @@ input, select, textarea {
 
 		#header p {
 			font-size: 1.25em;
-			margin: 0.75em 0 0.25em 0;
+			margin: 0.25em 0 0.75em 0;
 			opacity: 0.75;
 		}
 
