@@ -84,7 +84,8 @@ input, select, textarea {
 
 	body {
 		background: #fff;
-		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -118,9 +119,16 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
-		a:hover {
-			border-color: transparent;
-		}
+	a:hover {
+		border-color: transparent;
+	}
+
+	img.rspnsv {
+		min-height: 70px;
+		max-height: 193px;
+		width: auto;
+		height: 20vh;
+	}
 
 /* Icon */
 
@@ -211,6 +219,7 @@ input, select, textarea {
 
 /* BG */
 
+	
 	#bg {
 		-moz-animation: bg 60s linear infinite;
 		-webkit-animation: bg 60s linear infinite;
@@ -224,9 +233,10 @@ input, select, textarea {
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
+	
 	/* Set your background with this */
 
-		background: #348cb2 url("images/background-animated.gif") bottom left;
+		background: #348cb2 url("images/background-animated-new.gif") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
@@ -234,6 +244,7 @@ input, select, textarea {
 		position: fixed;
 		top: 0;
 	}
+
 
 	@-moz-keyframes bg {
 		0% {
@@ -243,12 +254,12 @@ input, select, textarea {
 			transform: translate3d(0,0,0);
 		}
 
-		100% {
+		/*100% {
 			-moz-transform: translate3d(-2250px,0,0);
 			-webkit-transform: translate3d(-2250px,0,0);
 			-ms-transform: translate3d(-2250px,0,0);
 			transform: translate3d(-2250px,0,0);
-		}
+		}*/
 	}
 
 	@-webkit-keyframes bg {
@@ -259,12 +270,12 @@ input, select, textarea {
 			transform: translate3d(0,0,0);
 		}
 
-		100% {
+		/*100% {
 			-moz-transform: translate3d(-2250px,0,0);
 			-webkit-transform: translate3d(-2250px,0,0);
 			-ms-transform: translate3d(-2250px,0,0);
 			transform: translate3d(-2250px,0,0);
-		}
+		}*/
 	}
 
 	@-ms-keyframes bg {
@@ -275,12 +286,12 @@ input, select, textarea {
 			transform: translate3d(0,0,0);
 		}
 
-		100% {
+		/*100% {
 			-moz-transform: translate3d(-2250px,0,0);
 			-webkit-transform: translate3d(-2250px,0,0);
 			-ms-transform: translate3d(-2250px,0,0);
 			transform: translate3d(-2250px,0,0);
-		}
+		}*/
 	}
 
 	@keyframes bg {
@@ -291,12 +302,12 @@ input, select, textarea {
 			transform: translate3d(0,0,0);
 		}
 
-		100% {
+		/*100% {
 			-moz-transform: translate3d(-2250px,0,0);
 			-webkit-transform: translate3d(-2250px,0,0);
 			-ms-transform: translate3d(-2250px,0,0);
 			transform: translate3d(-2250px,0,0);
-		}
+		}*/
 	}
 
 	#bg {
@@ -551,6 +562,7 @@ input, select, textarea {
 		top: -1em;
 		vertical-align: middle;
 		width: 90%;
+		padding: 0px;
 	}
 
 		#header h1 {
@@ -567,7 +579,7 @@ input, select, textarea {
 		}
 
 		#header nav {
-			margin: 1.5em 0 0 0;
+			margin: 0 0 0 0;
 		}
 
 			#header nav li {
@@ -746,12 +758,12 @@ input, select, textarea {
 					transform: translate3d(0,0,0);
 				}
 
-				100% {
+				/*100% {
 					-moz-transform: translate3d(-1500px,0,0);
 					-webkit-transform: translate3d(-1500px,0,0);
 					-ms-transform: translate3d(-1500px,0,0);
 					transform: translate3d(-1500px,0,0);
-				}
+				}*/
 
 	}
 
@@ -763,12 +775,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-1500px,0,0);
 				-webkit-transform: translate3d(-1500px,0,0);
 				-ms-transform: translate3d(-1500px,0,0);
 				transform: translate3d(-1500px,0,0);
-			}
+			}*/
 			}
 
 		@-ms-keyframes bg {
@@ -779,12 +791,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-1500px,0,0);
 				-webkit-transform: translate3d(-1500px,0,0);
 				-ms-transform: translate3d(-1500px,0,0);
 				transform: translate3d(-1500px,0,0);
-			}
+			}*/
 		}
 
 		@keyframes bg {
@@ -795,16 +807,16 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-1500px,0,0);
 				-webkit-transform: translate3d(-1500px,0,0);
 				-ms-transform: translate3d(-1500px,0,0);
 				transform: translate3d(-1500px,0,0);
-			}
+			}*/
 		}
 
 		#bg {
-			background-size: 1500px auto;
+			background-size: 1500px 100%;
 			width: 4500px;
 		} }
 
@@ -828,12 +840,12 @@ input, select, textarea {
 					transform: translate3d(0,0,0);
 				}
 
-				100% {
+				/*100% {
 					-moz-transform: translate3d(-750px,0,0);
 					-webkit-transform: translate3d(-750px,0,0);
 					-ms-transform: translate3d(-750px,0,0);
 					transform: translate3d(-750px,0,0);
-				}
+				}*/
 
 	}
 
@@ -845,12 +857,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-750px,0,0);
 				-webkit-transform: translate3d(-750px,0,0);
 				-ms-transform: translate3d(-750px,0,0);
 				transform: translate3d(-750px,0,0);
-			}
+			}*/
 			}
 
 		@-ms-keyframes bg {
@@ -861,12 +873,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-750px,0,0);
 				-webkit-transform: translate3d(-750px,0,0);
 				-ms-transform: translate3d(-750px,0,0);
 				transform: translate3d(-750px,0,0);
-			}
+			}*/
 		}
 
 		@keyframes bg {
@@ -877,16 +889,16 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-750px,0,0);
 				-webkit-transform: translate3d(-750px,0,0);
 				-ms-transform: translate3d(-750px,0,0);
 				transform: translate3d(-750px,0,0);
-			}
+			}*/
 		}
 
 		#bg {
-			background-size: 750px auto;
+			background-size: 750px 100%;
 			width: 2250px;
 		} }
 
@@ -914,12 +926,12 @@ input, select, textarea {
 					transform: translate3d(0,0,0);
 				}
 
-				100% {
+				/*100% {
 					-moz-transform: translate3d(-300px,0,0);
 					-webkit-transform: translate3d(-300px,0,0);
 					-ms-transform: translate3d(-300px,0,0);
 					transform: translate3d(-300px,0,0);
-				}
+				}*/
 
 	}
 
@@ -931,12 +943,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-300px,0,0);
 				-webkit-transform: translate3d(-300px,0,0);
 				-ms-transform: translate3d(-300px,0,0);
 				transform: translate3d(-300px,0,0);
-			}
+			}*/
 			}
 
 		@-ms-keyframes bg {
@@ -947,12 +959,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-300px,0,0);
 				-webkit-transform: translate3d(-300px,0,0);
 				-ms-transform: translate3d(-300px,0,0);
 				transform: translate3d(-300px,0,0);
-			}
+			}*/
 		}
 
 		@keyframes bg {
@@ -963,16 +975,16 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-300px,0,0);
 				-webkit-transform: translate3d(-300px,0,0);
 				-ms-transform: translate3d(-300px,0,0);
 				transform: translate3d(-300px,0,0);
-			}
+			}*/
 		}
 
 		#bg {
-			background-size: 300px auto;
+			background-size: cover;
 			width: 900px;
 		}
 
@@ -1012,12 +1024,12 @@ input, select, textarea {
 					transform: translate3d(0,0,0);
 				}
 
-				100% {
+				/*100% {
 					-moz-transform: translate3d(-412.5px,0,0);
 					-webkit-transform: translate3d(-412.5px,0,0);
 					-ms-transform: translate3d(-412.5px,0,0);
 					transform: translate3d(-412.5px,0,0);
-				}
+				}*/
 
 	}
 
@@ -1029,12 +1041,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-412.5px,0,0);
 				-webkit-transform: translate3d(-412.5px,0,0);
 				-ms-transform: translate3d(-412.5px,0,0);
 				transform: translate3d(-412.5px,0,0);
-			}
+			}*/
 			}
 
 		@-ms-keyframes bg {
@@ -1045,12 +1057,12 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-412.5px,0,0);
 				-webkit-transform: translate3d(-412.5px,0,0);
 				-ms-transform: translate3d(-412.5px,0,0);
 				transform: translate3d(-412.5px,0,0);
-			}
+			}*/
 		}
 
 		@keyframes bg {
@@ -1061,16 +1073,16 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 			}
 
-			100% {
+			/*100% {
 				-moz-transform: translate3d(-412.5px,0,0);
 				-webkit-transform: translate3d(-412.5px,0,0);
 				-ms-transform: translate3d(-412.5px,0,0);
 				transform: translate3d(-412.5px,0,0);
-			}
+			}*/
 		}
 
 		#bg {
-			background-size: 412.5px auto;
+			background-size: cover;
 			width: 1237.5px;
 		}
 
@@ -1078,4 +1090,5 @@ input, select, textarea {
 
 		#header nav {
 			padding: 0 1em;
+			/*font-size: 2.5vw;*/
 		} }
