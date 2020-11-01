@@ -1,42 +1,59 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4cs01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Tom Melloul</title>
+
+<!-- Meta -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="Content-Type-Script" content="text/javascript" />
+<meta name="Content-Type-Style" content="text/css" />
+<meta name="keywords" lang="en-us" content="tom melloul, architect, melloul, tom, design" />
+<meta name="description" content="about 255 characters/spaces WORDS relevant to the content of the actual page" />
+<meta name="Abstract" content="A portfolio website for Tom Melloul: a multidisciplinary architect and creative coder." />
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-<!--LAZY LOADER-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>Tom Melloul</title>
+
+<!----------------------------------------------------------------------> 
+
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="ico_lg.png">
 	
-<script src="https://unpkg.com/webp-hero@0.0.0-dev.26/dist-cjs/polyfills.js"></script>
-<script src="https://unpkg.com/webp-hero@0.0.0-dev.26/dist-cjs/webp-hero.bundle.js"></script>
 	
-<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
-<script src="assets/js/yall.min.js"></script>
-<script src="assets/js/ofi.min.js"></script>
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-		yall({
-			observeChanges: true  
-		});
-		objectFitImages();
-	});
-</script>	
-	
-<!--CSS-->
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/portfolio.css" />
-<link rel="stylesheet" href="assets/css/scroll.css" />
-<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap" rel="stylesheet">
 
-<!--touchPDF-->
-<!--<link href="assets/touchPDF/jquery.touchPDF.css" rel="stylesheet" media="screen" />-->
+<!-- Fullpage CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"
+			  integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" 
+			  crossorigin="anonymous" />
 
-<!--lightSlider-->
-<link href="assets/lightSlider/css/lightslider.css" rel="stylesheet" media="screen" />
+<!-- Fancy<strong>box</strong> CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
-<!--No Script-->
+<!-- Media Element CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" integrity="sha512-RZKnkU75qu9jzuyC+OJGffPEsJKQa7oNARCA6/8hYsHk2sd7Sj89tUCWZ+mV4uAaUbuzay7xFZhq7RkKFtP4Dw==" crossorigin="anonymous" />
+
+<!-- Main CSS -->
+<link type="text/css" rel="stylesheet" media="all" href="assets/css/main.css" />
+
+<!-- Gallery CSS -->
+<link type="text/css" rel="stylesheet" media="all" href="assets/css/gallery.css" />
+
+<!-- About CSS -->
+<link type="text/css" rel="stylesheet" media="all" href="assets/css/about.css" />
+
+<!----------------------------------------------------------------------> 
+
+<!--Object Fit --> 
+<script src="assets/js/ofi.min.js"></script> 
+
+<!-- No Script -->
 <noscript>
-<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 </head>
 
@@ -44,1086 +61,1068 @@
 
 <!-- Wrapper -->
 <div id="wrapper">
-	<header id="menu">
-		<nav>
-			<a href="#"><div class="logo"><img class="head" src="images/TombaHead.png" alt=""/><br>
-				<img class="blink" src="images/TombaHead_blink.png" alt=""/> <br>
-				 <img class="smile" src="images/TombaHead_smile.png" alt=""/>  </div>
-			<div class="smallName">Tom Melloul</div></a>
-			<ul>
-				<li><a href="#resume" id="menu_resume">Résumé</a></li>
-				<li><a href="#skills" id="menu_skills">Skills</a></li>
-				<li><a href="#portfolio" id="menu_portfolio">Portfolio</a></li>
-				<li><a href="#contact" id="menu_contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<!-- Header -->
-	<header id="header">
-		<div class="logo">
-			<div id="bubble"> <span id="randomquote" class="glitch" data-text=""></span> </div>
-			<img class="head" src="images/TombaHead.png" alt=""/> <br>
-			<img class="blink" src="images/TombaHead_blink.png" alt=""/> <br>
-			<a href="#" id="tombaHover"> <img class="smile" src="images/TombaHead_smile.png" alt=""/> </a> </div>
-		<div class="content">
-			<div class="inner"> 
-				<!--                <h1>Tom Melloul</h1>-->
-				<svg id="Text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.41 108.18">
-					<defs>
-						<style>
-.cls-1{fill: rgba(31,31,31,0.8); font-size:81px;font-family:Roboto-Black, Roboto;font-weight:800;letter-spacing: -0.23rem;}.cls-2{font-size:36.5px;letter-spacing: 0px;}
-</style>
-					</defs>
-					<title>Tom Melloul</title>
-					<text class="cls-1" transform="translate(0 69.29)">TOM
-						<tspan class="cls-2">
-							<tspan x="16.42" y="29">MELLOUL</tspan>
-						</tspan>
+	<div id="menuBG"></div>
+	<div id="menu">
+		<div id="menuLogo" class="nopointer"> <a id="menuHome" href="#"> <span id="targetO"></span>
+			<div style="overflow: hidden; height: 100%;  display: inline-block;">
+				<svg class="menu" id="Name" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 185">
+					<line class="cls-1" x1="5.27" y1="182.5" x2="46.27" y2="2.5"/>
+					<text class="cls-2" transform="translate(100 79.52)">
+						<tspan x="0" y="0">TOM</tspan>
+						<tspan x="0" y="96">MELLOUL</tspan>
 					</text>
 				</svg>
-				<p id="TextDesc">ARCHITECT, DESIGNER &amp; CREATIVE CODER</p>
 			</div>
-		</div>
-		<nav>
-			<ul>
-				<li><a href="#resume">Résumé</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#portfolio">Portfolio</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	<!-- Main -->
-	<div id="main"> 
-		
-		<!-- Résumé -->
-		<article id="resume" data-pdf="files/Tom_Melloul_-_Resume.pdf">
-			<div class="rTable">
-				<div class="rTableRow">
-					<div class="rTableCell">
-						<h2 class="major">Résumé</h2>
-					</div>
-				</div>
-			</div>
-			<a name="Resume-About"></a>
-			<div class="article-content">
-				<div id="myPDF"></div>
-				<section name="RES-ABOUT">
-					<h2-3>ABOUT</h2-3>
-					<table class="super">
-						<tr>
-							<td style="width: 30vmin; !important; padding-right: 0.5rem !important; text-align: center !important;"><img class="profile" src="images/Resume/Tom-About.png" alt="" style="margin: 0.5rem 0.5rem 0.2rem 0.5rem;"/></td>
-							<td id="maxAbout" style="vertical-align: top"><table class="sub" style="table-layout: fixed;">
-									<tbody>
-										<tr>
-											<th style="width: 8rem !important;">Born</th>
-											<td>1987, Tel Aviv, Israel.</td>
-										</tr>
-										<tr>
-											<th>Nationality</th>
-											<td>Israeli, French.</td>
-										</tr>
-										<tr>
-											<th>Places Lived</th>
-											<td><span style="float: left; padding: 0 !important; width:8rem !important;">Tel-Aviv, IL</span> 2013 - Present<br/>
-												<span style="float: left; padding: 0 !important; width:8rem !important;">Paris, FR</span> 2012 - 2013<br/>
-												<span style="float: left; padding: 0 !important; width:8rem !important;">Rotterdam, NL</span> 2009 - 2012 </td>
-										</tr>
-									</tbody>
-								</table></td>
-						</tr>
-					</table>
-					<table id="minAbout">
-						<tbody>
-							<tr>
-								<th style="width: 8rem !important;">Born</th>
-								<td>1987, Tel Aviv, Israel.</td>
-							</tr>
-							<tr>
-								<th>Nationality</th>
-								<td>Israeli, French.</td>
-							</tr>
-							<tr>
-								<th>Languages</th>
-								<td><span style="float: left; padding: 0 !important; width:8rem !important;">Native Speaker:</span> Hebrew<br/>
-									<span style="float: left; padding: 0 !important; width:8rem !important;">Highly Fluent:</span> English<br/>
-									<span style="float: left; padding: 0 !important; width:8rem !important;">Conversant:</span> French, Dutch. </td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section name="RES-EDUCATION">
-					<h2-3>EDUCATION</h2-3>
-					<table>
-						<tbody>
-							<tr>
-								<th>2014 - 2019</th>
-								<td><strong>B.Arch in Architecture</strong>, <em>Tel Aviv University's Azrieli School of Architecture</em>, Tel-Aviv, Israel.</td>
-							</tr>
-							<tr>
-								<th>2001 - 2005</th>
-								<td><strong>Major in Visual Arts</strong>, <em>Thelma Yellin High School of the Arts</em>, Givatayim, Israel</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section name="RES-WORKEXP">
-					<h2-3>WORKING EXPERIENCE</h2-3>
-					<table>
-						<tbody>
-							<tr>
-								<th>2016 - Present</th>
-								<td>
-									<strong>BEA Architects &amp; Town Planners</strong>, &nbsp;<em>Architect &amp; Chief Parametric Designer</em><br>
-									<span class="details"> Joined the studio as a student. A member of the studio's creative design team. Led and participated in multiple projects in an array of scales and fields, including urban planning and complex building design. In late 2019, was appointed as the studio's Chief Parametric Designer and overlooked all technological aspects of the studio. </span>
-								</td>
-							</tr>
-							<tr>
-								<th>2018 - 2019</th>
-								<td><strong>Self Employed</strong>, <em>Instructor &amp; Coordinator</em><br>
-									<span class="details"> Instructed, coordinated and created multiple course curricula for Rhinoceros 3D, Grashopper for Beginners and Grasshopper for Proffesionals. </span></td>
-							</tr>
-							<tr>
-								<th>2018</th>
-								<td><strong>Architecture Department at the Bezalel Academy</strong>, <em>Assitant Instructor</em><br>
-									<span class="details"> Assisted and tutored 4th &amp; 5th year students at <em>PUL L (Prametric Urban Landscape Lab)</em> led by Arch. Natanel Elfassy during the year's 1st semester.  Created in depth technical tutorials and provided technical one-on-one guidance for students throughout the semester. </span></td>
-							</tr>
-							<tr>
-								<th>2013 - 2016</th>
-								<td><strong>Malam Team</strong>, <em>BI Specialist</em><br>
-									<span class="details"> Developed and maintained dashboards, reports, and dimensional data models for local and international clients. Planned data warehouses using ETL platforms and best practices to reflect corporate managerial reporting requirements. Created &amp; customized tailor-made UX solutions for data visualization and report usability. Trained customers and employees in various aspects of business intelligence. </span></td>
-							</tr>
-							<tr>
-								<th>2008 - 2014</th>
-								<td><strong>Tomba</strong>, <em>Owner, Producer &amp; DJ</em><br>
-									<span class="details"> World-renowned electronic music producer, 3 times in Beatport top 10 Dubstep Charts, over 1M views on Youtube and Spotify, and more than 25K fans on Facebook. World touring DJ with live performances in over than 30 cities in 3 continents. Hired a staff of three (booking agent, manager and accountant). </span></td>
-							</tr>
-							<tr>
-								<th>2007 - 2010</th>
-								<td><strong>Datamine</strong>, <em>Graphic Designer, BI Reporting Specialist</em><br>
-									<span class="details"> Planned, Designed and Assimilated Cognos KPI and Cube systems Reporting for local and international clients. Developed customized &amp; tailor-made UX solutions for data visualization and report usability, using built-in methodologies. </span></td>
-							</tr>
-							<tr>
-								<th>2006 - 2008</th>
-								<td><strong>Alphamale Primates</strong>, <em>Co-founder,&nbsp; Producer &amp; DJ&nbsp;</em><br>
-									<span class="details"> Organized &amp; produced nightlife dance events in local clubs. Hired a staff of 4. </span></td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-			</div>
-		</article>
-		
-		<!-- Skills -->
-		<article id="skills" data-pdf="files/Tom_Melloul_-_Resume.pdf">
-			<div class="rTable">
-				<div class="rTableRow">
-					<div class="rTableCell">
-						<h2 class="major">Skills</h2>
-					</div>
-				</div>
-			</div>
-			<a name="Resume-About"></a>
-			<div class="article-content">
-				<section name="SKILLS-SOFTHARD">
-					<h2-3>Software &amp; Hardware</h2-3>
-					<table class="super">
-						<tbody>
-							<tr>
-								<th>3D &amp; CAD</th>
-								<td><table class="sub">
-										<tr>
-											<td>Rhino</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>SketchUp</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>Cinema 4D</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>Autocad</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>Revit</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-										<tr>
-											<td>3ds Max</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>RENDERING</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>Lumion</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>V-ray</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>Octane</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>Redshift</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>IMAGE &amp; VIDEO EDITING</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>Photoshop</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>Illustrator</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>Indesign</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>After Effects</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>Premiere</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>SCRIPTING &amp; VPL</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>Grasshopper</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>Dynamo</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-										<tr>
-											<td>Python</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-										<tr>
-											<td>C/C++/C#</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-										<tr>
-											<td>Javascript</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>HTML</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>CSS</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>PL/SQL</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>VVVV</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>Processing</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-										<tr>
-											<td>Touchdesigner</td>
-											<td class="Elementary Skill"></td>
-										</tr>
-										<tr>
-											<td>Arduino IDE</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>G-code</td>
-											<td class="Elementary Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>GIS</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>QGIS</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>CityEngine</td>
-											<td class="Elementary Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>GAME ENGINES</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>Unreal Engine</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-										<tr>
-											<td>Unity</td>
-											<td class="Elementary Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>3D PRINTING</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>Cura</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-										<tr>
-											<td>Simplify3D</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>SINGLE BOARDS</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>Arduino</td>
-											<td class="Intermediate Skill"></td>
-										</tr>
-										<tr>
-											<td>Raspberry Pi</td>
-											<td class="Elementary Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-							<tr>
-								<th>DAWs</th>
-								<td style="font-weight:normal; width: 100%; padding: 0 !important; margin: 0 !important;"><table class="sub" style="padding: 0px !important; margin 0px !important; width: 100% !important">
-										<tr>
-											<td>Cubase</td>
-											<td class="Expert Skill"></td>
-										</tr>
-										<tr>
-											<td>Abelton Live</td>
-											<td class="Advanced Skill"></td>
-										</tr>
-									</table></td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section name="SKILLS-LANG">
-					<h2-3>Languages</h2-3>
-					<table>
-						<tbody>
-							<tr>
-								<th>Hebrew</th>
-								<td class="NativeSpeaker Lang"></td>
-							</tr>
-							<tr>
-								<th>English</th>
-								<td class="HighlyFluent Lang"></td>
-							</tr>
-							<tr>
-								<th>French</th>
-								<td class="Conversant Lang"></td>
-							</tr>
-							<tr>
-								<th>Dutch</th>
-								<td class="Conversant Lang"></td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-			</div>
-		</article>
-		
-		<!-- Portfolio -->
-		<article id="portfolio" data-pdf="files/Tom_Melloul_-_Portfolio.pdf" class="pFilter">
-			<div class="rTable">
-				<div class="rTableRow">
-					<div class="rTableCell">
-						<h2 class="major">Portfolio</h2>
-					</div>
-				</div>
-			</div>
-			<div class="article-content">
-				<div id="portfolioGallery"> <a href="#projects/ANIMISM">
-					
-					<div class="project academic" id="01%20ANIMISM" title="ANIMISM" data-desctitle="ANIMISM - The Living City" data-desc="Final Project, 5th Year" style="background-image: url('images//portfolio/01%20ANIMISM.jpg')"></div>
-					</a> <a href="#projects/WENDY">
-					
-					<div class="project academic" id="02%20WENDY" title="WENDY" data-desctitle="Meet WENDY - The Vending Machine" data-desc="Digital Studio, 3rd Year" style="background-image: url('images//portfolio/02%20WENDY.jpg')"></div>
-					</a> <a href="#projects/EVO">
-					
-					<div class="project academic" id="03%20EVO" title="EVO" data-desctitle="EVO - Living Evolution" data-desc="Residential Studio, 3rd Year" style="background-image: url('images//portfolio/03%20EVO.jpg')"></div>
-					</a> <a href="#projects/EAAA">
-					
-					<div class="project academic" id="04%20EAAA" title="EAAA" data-desctitle="Elifelet Academy of Applied Arts" data-desc="Complex Studio, 4th Year" style="background-image: url('images//portfolio/04%20EAAA.jpg')"></div>
-					</a> <a href="#projects/MIST">
-					
-					<div class="project academic" id="05%20MIST" title="MIST" data-desctitle="MIST - Talpiot Bath House" data-desc="Interior Design Studio, 4th Year" style="background-image: url('images//portfolio/05%20MIST.jpg')"></div>
-					</a> <a href="#projects/UMAGUTI">
-					
-					<div class="project academic" id="06%20UMAGUTI" title="UMAGUTI" data-desctitle="UMAGUTI - &quot;Where There's Life&quot;" data-desc="Extreme Global Studio, 3rd Year" style="background-image: url('images//portfolio/06%20UMAGUTI.jpg')"></div>
-					</a> <a href="#projects/CLEAR-STUDIO">
-					
-					<div class="project academic" id="07%20CLEAR%20STUDIO" title="CLEAR
-STUDIO" data-desctitle="CLEAR STUDIO - A popup music studio" data-desc="Technolgy Studio, 3rd Year" style="background-image: url('images//portfolio/07%20CLEAR%20STUDIO.jpg')"></div>
-					</a> <a href="#projects/HS-BUILDING">
-					
-					<div class="project practical" id="08%20HS%20BUILDING" title="HS
-BUILDING" data-desctitle="Health Sciences Building" data-desc="MTA Academic College, Tel Aviv-Jaffa, Israel" style="background-image: url('images//portfolio/08%20HS%20BUILDING.jpg')"></div>
-					</a> <a href="#projects/NEOT-SHAMIR">
-					
-					<div class="project practical" id="09%20NEOT%20SHAMIR" title="NEOT
-SHAMIR" data-desctitle="&quot;Neot Shamir&quot; Elementary School" data-desc="Yavne Municipality, Israel" style="background-image: url('images//portfolio/09%20NEOT%20SHAMIR.jpg')"></div>
-					</a> <a href="#projects/HADASSIM">
-					
-					<div class="project practical" id="10%20HADASSIM" title="HADASSIM" data-desctitle="&quot;Hadassim&quot; (250A) Urban Building Scheme" data-desc="Even Yehuda Municipality, Israel" style="background-image: url('images//portfolio/10%20HADASSIM.jpg')"></div>
-					</a> </div>
-			</div>
-			<div id= "Filter" class="Filter">
-				<span id="Filter" class="active">All</span>
-				<span id="Filter-academic">Academic</span>
-				<span id="Filter-practical">Practical</span>
-			</div>
-		</article>
-		
-		<!-- Projects -->
-		<article id="projects">
-			<div class="rTable">
-				<div class="rTableRow">
-					<div class="rTableCell">
-						<h2 class="major" id="projectName">Portfolio</h2>
-					</div>
-				</div>
-			</div>
-			<div id="projectsContent" class="article-content">
-				<div id="projectText"></div>
-				<div id="projectMedia"><div class="gallery container"></div></div>
-			</div>
-		</article>
-		
-		<!-- Projects Details -->
-		<div id="projects-details"> 
-			<!-- ANIMISM -->
-			<div id="about_ANIMISM">
-				<div class="textTitle">
-					<h1>ANIMISM</h1>
-					<h3>The Living City</h3>
-					<span class="credit">
-						Nitsan Bartov, Tom Melloul<br/>
-						BisTAU Studio led by Arch. Moti Bodek, 2019
-					</span>
-				</div>
-				<div class="textScroll">
-					As we enter the 21st century, humanity’s striving for stability is being replaced by a constant desire for change and stimulation.<br/><br/>
-					The built environment ironically reflects the gap between these desires, and is increasingly becoming more rigid and lifeless; a salient example of which is Netanya’s Ir Yamim district.<br><br>
-					This project presents a new way of reading space through people; The city lives, adapts, and reacts to an ever-changing reality. It is dynamic and relevant, encouraging a sense of empathy between the city and its people.<br/><br/>
-					<strong>ANIMISM is the birth of the living city.</strong>
-				</div>
-			</div>
-			<div id="gallery_ANIMISM">
-				<li title="Project Video" data-thumb="projects/ANIMISM/thumb/Main.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/18GyX4DB1M_CgVM-EFFu6bgbAOmv7FRLy?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/ANIMISM/thumb/Presentation.png">
-				<iframe id="pres-ANIMISM" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/10-pCLeJTuySP9sDJP87jCIup_Ilgk_mlEJaOYteCcro/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Render" data-thumb="projects/ANIMISM/thumb/Render.webp">
-					<img class="lazy" data-src="projects/ANIMISM/Render.jpg"/>
-				</li>
-				<li title="Section" data-thumb="projects/ANIMISM/thumb/Section.webp">
-					<img class="lazy" data-src="projects/ANIMISM/Section.jpg"/>
-				</li>
-				<li title="Exploded" data-thumb="projects/ANIMISM/thumb/Exploded.webp">
-					<img class="lazy" data-src="projects/ANIMISM/Exploded.jpg"/>
-				</li>
-				<li title="Mapping" data-thumb="projects/ANIMISM/thumb/Mapping.webp">
-					<img class="lazy" data-src="projects/ANIMISM/Mapping.jpg"/>
-				</li>
-				<li title="Algorithm" data-thumb="projects/ANIMISM/thumb/Algorithm.webp">
-					<img class="lazy" data-src="projects/ANIMISM/Algorithm.jpg"/>
-				</li>
-				<li title="Protocell" data-thumb="projects/ANIMISM/thumb/Protocell.webp">
-					<img class="lazy" data-src="projects/ANIMISM/Protocell.jpg"/>
-				</li>
-				<li title="Formation" data-thumb="projects/ANIMISM/thumb/Formation.webp">
-					<img class="lazy" data-src="projects/ANIMISM/Formation.jpg"/>
-				</li>
-				<li title="Micro Formation Video" data-thumb="projects/ANIMISM/thumb/Formation-Video.webp">
-					<video loop controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1OnROMDsb3td6Pl_d3DwOoVOU2L_HXztm?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Macro Formation Video" data-thumb="projects/ANIMISM/thumb/Algorithm-Video.webp">
-					<video loop controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1JwPNRE0-IwOVMwbdHMQ9mgcG2EansLLW?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-			</div>
-			
-			<!-- WENDY -->
-			<div id="about_WENDY">
-				<div class="textTitle">
-					<h1>Meet WENDY</h1>
-					<h3>The Living Vending Machine</h3>
-					<span class="credit">
-						Nitsan Bartov, Lealla Solomon, Yaron Zakay, Tom Melloul<br/>
-						Digital Studio led by Prof. Arch. Eran Neuman &amp; Arch. Tamir Lavie, 2017
-					</span>
-				</div>
-				<div class="textScroll">
-					The concept of WENDY was born on a field trip to Tokyo, as a part of the Digital Studio which focused on the exploration of the relationship between the physical and the virtual dimensions, through experimental design research and digital fabrication.<br/><br/>
-					
-					<strong>#MeetWENDY</strong> is an interactive full-scale installation that allows observers to get inside of a vending machine - a typical Tokyoite phenomenon - and experience it coming to life by interacting with it, getting to know it, and coming out as the product of their own personal encounter.
-				</div>
-			</div>
-			<div id="gallery_WENDY">
-				<li title="Project Video" data-thumb="projects/Wendy/thumb/Video.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1rodUAnKLgbP_euyCKA5p9iElN3Gp3M-Y?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Project Booklet" data-thumb="projects/WENDY/thumb/Presentation.png">
-				<iframe id="pres-WENDY" class="iframe-pres lazy" data-src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dhfdqy0n30" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
-				</li>
-				<li title="Interior Experience Video" data-thumb="projects/WENDY/thumb/Interior.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1qMsFMu2evfba674PJLySCCf5Lb3OKYWT?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Point of View Video" data-thumb="projects/WENDY/thumb/POV.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1opkIdgl5K0rEQ1OrujU6IQOTPVb2PGmm?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-			</div>
-			
-			<!-- EVO -->
-			<div id="about_EVO">
-				<div class="textTitle">
-					<h1>EVO</h1>
-					<h3>Living Evolution</h3>
-					<span class="credit">
-						Eka Janashia, Tom Melloul<br/>
-						Residential Studio led by Arch. Leonardo Kelijman &amp; Arch. Dafna Matok, 2017
-					</span>
-				</div>
-				<div class="textScroll">
-					Urban environments have seen immense growth in population density in recent decades, leading to an extensive <strong>Vertical Expansion</strong> of the urban residential building<br/><br/>
-					
-					Following major cities around the world, Tel-Aviv, Israel's financial and cultural capital, has increasingly adopted verticality in the new millennium. While some areas have adapted well to linear extrusion, others became secluded and have essentially detached themselves from Tel-Aviv’s urban DNA, while depriving their inhabitants of recreational communal zones. In light of this phenomenon, we set out to examine an alternative urban expansion method which will allow for an efficient yet communal living - a new <strong>Spatially Expandable</strong> urban model.<br/><br/>
-
-					To lay the foundations for a case study, we first attempted to determine the city's core DNA by examining Geddes’ original urban plan for Tel-Aviv.	The plan's most notable urban factor and the recurrent theme was its array of <strong>Green Spaces</strong> - a quintessential Tel-Avivian urban generator.	Recognizing their importance, we have pinpointed and interconnected each green space to create a new way to read the city - an alternative Voronoi map.<br/><br/>
-					
-					After performing an urban study via the new map, we then zoomed in to a typical Geddes lot and its surrounding buildings, which acted as a case study for our analysis. The analysis led us to extract 5 key Gedessian core parameters which formed the basis for a new spatially expandable model.<br/><br/>
-					
-					We then converted the 2D subdivision logic into spatial tesselation, which resulted in a double-layered cellular mesh based on a 3D point cloud. The mesh cells, however, were inhabitable mainly due to their sloped floors. Therefore, we further manipulated the point cloud and created a horizontal coplanar tesselation based system.<br/><br/>
-
-					Ultimately, the final spatial model produced a porous cellular network that could expand and contract accordingly. Each geometrically unique cell contained a horizontal floor and followed core "Gedessian" values. The cells could interchangeably act as dwelling units, open spaces, or alternatively merge with neighboring cells to accommodate for larger-scale recreational and commercial activities - giving birth to <strong>EVO</strong> - an adaptive living system that stems from Tel-Aviv's unique urban DNA. 
-				</div>
-			</div>
-			<div id="gallery_EVO">
-				<li title="Project Video" data-thumb="projects/EVO/thumb/Main.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/16TiJiuxluGtxkSXkrQ2miy1DUke3QeG4?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/EVO/thumb/Presentation.png">
-				<iframe id="pres-EVO" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/12Z_SqZZpyn5xy7xhOQXJe0G1ejtuUoy5fHN-ahBzWgA/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Perspective View" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Render 02.jpg"/>
-				</li>
-				<li title="Cellular Experiments" data-thumb="projects/EVO/thumb/Cellular-Video.webp">
-					<video loop controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1T71mEuS-dX9LLrUyXv-x3P3AVvCUlqAo?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Semi Orthogonal Cell Creation" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Semi Orthogonal Cell Creation.jpg"/>
-				</li>
-				<li title="Area Plan" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Area Plan.jpg"/>
-				</li>
-				<li title="Ground Floor" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Ground Floor.jpg"/>
-				</li>
-				<li title="Generic Floor" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Generic Floor.jpg"/>
-				</li>
-				<li title="Underground Floor" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Underground Floor.jpg"/>
-				</li>
-				<li title="Section A" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Section A.jpg"/>
-				</li>
-				<li title="Section B" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Section B.jpg"/>
-				</li>
-				
-				<li title="Apartment A Plan" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Apartment A.jpg"/>
-				</li>
-				<li title="Apartment B Plan" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Apartment B.jpg"/>
-				</li>
-				<li title="Apartment C Plan" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Apartment C.jpg"/>
-				</li>
-				<li title="Perspective View" data-thumb="">
-					<img class="lazy" data-src="projects/EVO/Render 01.jpg"/>
-				</li>
-			</div>
-			
-			<!-- EAAA -->
-			<div id="about_EAAA">
-				<div class="textTitle">
-					<h1>EAAA</h1>
-					<h3>Elifelet Academy of Applied Arts</h3>
-					<span class="credit">
-						Nitsan Bartov, Rotem Arad, Tom Melloul<br/>
-						Complex Studio led by Arch. Rami Gil &amp; Arch. Leonardo Kelijman, 2018
-					</span>
-				</div>
-				<div class="textScroll">
-					The light-train plan of Tel-Aviv will have a massive impact on urban life in the center of Israel, and the planned stations hold an opportunity to become urban generators and focal points.<br><br>
-					
-					Elifelet Station lies in a strategic location between some of the most characterized neighborhoods in Tel-Aviv, yet it remained untouched to this day and became a "no man's land".<br><br>
-					
-					<strong>EAAA - Elifelet Academy of Applied Arts</strong>, is an academic center that is fully integrated with the street, the station, and the surroundings. It engages the street level with commercial and cultural programs, and allow residential solutions on the roof. 
-				</div>
-			</div>
-			<div id="gallery_EAAA">
-				<li title="Project Video" data-thumb="projects/EAAA/thumb/Main.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1KlTlWK8WSvWNCAyT-p9j9D5CAshPAA88?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/EAAA/thumb/Presentation.png">
-				<iframe id="pres-EAAA" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/1_sfUWX0Tc7HKpnLFtF1DQXXCeM2Ry3Wp6JIqAPSPb-k/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Exploded Diagram" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Exploded Diagram.jpg"/>
-				</li>
-				<li title="Program Diagram" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Program Diagram.jpg"/>
-				</li>
-				<li title="Ground Floor" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/0 Ground Floor.jpg"/>
-				</li>
-				<li title="Section A" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Section A.jpg"/>
-				</li>
-				<li title="Section B" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Section B.jpg"/>
-				</li>
-				<li title="2nd Floor" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/2nd Floor.jpg"/>
-				</li>
-				<li title="3rd floor" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/3rd floor.jpg"/>
-				</li>
-				<li title="4th Floor" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/4th Floor.jpg"/>
-				</li>
-				<li title="5th Floor" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/5th Floor.jpg"/>
-				</li>
-				<li title="Urban Strategy" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Urban Strategy.jpg"/>
-				</li>
-				<li title="Site Anaylsis" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Site Anaylsis.jpg"/>
-				</li>
-				<li title="Night-Time Perspective" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Render 01.jpg"/>
-				</li>
-				<li title="Studios' Park View" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Render 02.jpg"/>
-				</li>
-				<li title="Perspective" data-thumb="">
-					<img class="lazy" data-src="projects/EAAA/Render 03.jpg"/>
-				</li>
-			</div>
-			
-			<!-- MIST -->
-			<div id="about_MIST">
-				<div class="textTitle">
-					<h1>MIST</h1>
-					<h3>Talpiot Bath House</h3>
-					<span class="credit">
-						Noa Eisenberg, Tom Melloul<br/>
-						Interior Design Studio led by Arch. Guy Re Moor, 2018
-					</span>
-				</div>
-				<div class="textScroll">
-					Talpiot market <em>(Arch. Moshe Gerstel, 1940)</em> has long served as one of Haifa’s most influential cultural landmarks. Alas, this fine specimen of the International Style that once housed a bustling market has deteriorated since the 80's to near-abandonment in recent years.<br/><br/>
-
-					Despite its current disfunction and physical state, the structure’s worn-out components tell a mystical story of constant transformation, and its symmetric layout beares a striking resemblance to ancient classical bathhouse floorplans. Indeed, bathhouses, alongside their obvious functional elements, have always seemed to possess mysterious qualities that greatly contributed to their very essence of being.<br/><br/>
-
-					Stagnant water, crumbling walls, damp concrete, and broken glass - these, and many more, contribute to a Talpiot's aura of patina that encapsulates its concrete shell. The building's aesthetics of ruin and decay captivates one’s imagination, as it becomes one with nature’s elements. Talpiot's materials bind with water, light, and vegetation to ultimately transcend into metamaterials - laying the foundations for <strong>MIST - Talpiot’s Bathhouse</strong>. 
-				</div>
-			</div>
-			<div id="gallery_MIST">
-				<li title="Project Video" data-thumb="projects/MIST/thumb/Main.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1H07O9huTeBVkYM1lWSTqUCcC_NunMDk4?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/MIST/thumb/Presentation.png">
-				<iframe id="pres-MIST" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/1tZIKQY-otcYOf6ifFH9uFqG2dKrr92htALyP-vOV_FI/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Roff Pool View" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/Render Roof.jpg"/>
-				</li>
-				<li title="Main Hall View" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/Render Main Hall.jpg"/>
-				</li>
-				<li title="Steam Bath View" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/Render Waterfall.jpg"/>
-				</li>
-				<li title="Exterior Perspective" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/Render Exterior.jpg"/>
-				</li>
-				<li title="Early Concept Draft 1" data-thumb="projects/MIST/thumb/ConceptVideo1.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1gXELoY0hLu8EhB8OS3pdkCuIN-CicJTe?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Early Concept Draft 2" data-thumb="projects/MIST/thumb/ConceptVideo2.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1SBrYwlrfMjoJNfEp3YfXSFq9tZNKm5XA?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Timeline Diagram" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/Timeline Diagram.jpg"/>
-				</li>
-				<li title="Area Plan" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/Area Plan.jpg"/>
-				</li>
-				<li title="Ground Floor Plan" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/0 Ground Floor.jpg"/>
-				</li>
-				<li title="1st Floor Plan" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/1st Floor.jpg"/>
-				</li>
-				<li title="2nd Floor Plan" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/2nd Floor.jpg"/>
-				</li>
-				<li title="Section A" data-thumb="">
-					<img class="lazy" data-src="projects/MIST/Section.jpg"/>
-				</li>
-			</div>
-			
-			<!-- UMAGUTI -->
-			<div id="about_UMAGUTI">
-				<div class="textTitle">
-					<h1>UMAGUTI</h1>
-					<h3><em>"Where There's Life"</em></h3>
-					<span class="credit">
-						Nitsan Bartov, Yagev Langer, Tom Melloul<br/>
-						Azrieli Global Studio led by Arch. Tamir Lavie, 2016<br/>
-					</span>
-				</div>
-				<div class="textScroll">
-					<em>The Azrieli Global Studio Program</em> is a collaboration between <em>McGill University</em>, <em>The Technion</em>, and <em>Tel Aviv University</em>.<br><br>
-					
-					The 6-week course was an immersive design studio which included an excursion to the Canadian Subarctic. The students researched ideas of limits and extremities in the global natural terrain, focusing on the freezing and remote landscape of Schefferville, Quebec - the field trip's destination.<br/><br/>
-					
-					Northern Subarctic Canada is plentiful with minerals, most notably Iron Ore. Over the past decades, the resource-abundant area has seen the mining industry cement its role as a relatively exclusive economic driving force. However, lax government regulations have allowed for unattended and overly intense mining, leaving behind barren and wounded soil, and a struggling, neglected, local community.<br><br>
-					
-					Alongside rising financial and social issues, recent researches have also shown a decline in the local population's physical and mental health, due to insufficient intake of fruits and vegetables. These were reaffirmed upon interviewing local teenagers, during which they repeatedly mentioned fresh fruits and vegetables when asked what life in this area lacks the most.<br/><br/>
-
-					<strong>UMAGUTI</strong> <em>(Innu for "Where There's Life")</em>, sets out to put abandoned mines to use and attempt to heal the soil's open wounds by inhabiting them. Through parametric design, solar form-finding, and advanced building technologies, UMAGUTI utilizes the mine's unique footprint. The terrace-like topography, combined with a robust lightweight ETFE Membrane, is used to accommodate for durable housing and sustainable sub-arctic farming that enables the cultivation of fresh local produce.<br><br>
-					
-					The farm layout also includes a research facility and a visitor's center, aimed to provide the community with a set of robust tools that will help them grow, develop, and prosper by re-using discarded land.
-				</div>
-			</div>
-			<div id="gallery_UMAGUTI">
-				<li title="Birdseye View" data-thumb="">
-					<img class="lazy" data-src="projects/UMAGUTI/Birdseye View.jpg"/>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/UMAGUTI/thumb/Presentation.png">
-				<iframe id="pres-UMAGUTI" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/1yXgWMBP4FDS98DumIx_Y25U3ofv-TqgDwPLVhjjlpl4/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Render Exterior" data-thumb="">
-					<img class="lazy" data-src="projects/UMAGUTI/Render Exterior.jpg"/>
-				</li>
-				<li title="Render Interior" data-thumb="">
-					<img class="lazy" data-src="projects/UMAGUTI/Render Interior.jpg"/>
-				</li>
-				<li title="Conceptual Diagram" data-thumb="">
-					<img class="lazy" data-src="projects/UMAGUTI/Diagram Concept.jpg"/>
-				</li>
-				<li title="ETFE Membrane Inflation & Smoothing" data-thumb="projects/UMAGUTI/thumb/VIDEO Ifnlate.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1LlnLTU9D-Pew-d8sMgccmxy2hEu_sDr2?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Solar Form Finding" data-thumb="projects/UMAGUTI/thumb/VIDEO Form.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1Fhn0qIyH6Uvyw8cn0YksA4UmW2EslpnG?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-			</div>
-			
-			<!-- CLEAR-STUDIO -->
-			<div id="about_CLEAR-STUDIO">
-				<div class="textTitle">
-					<h1>CLEAR STUDIO</h1>
-					<h3>A pop-up urban music studio</h3>
-					<span class="credit">
-						Tom Melloul<br/>
-						Technology Studio B led by Simone Friedman, 2016<br/>
-					</span>
-				</div>
-				<div class="textScroll">
-					The Technology Studio focuses on the integrated design of a small structure with an emphasis on building technologies, materials, and design details. During the first part of the semester, the students designed a simple public toilets structure in large groups. During the 2nd part of the semester, each student was assigned to define and design a detachable pop-up function that will attach to the toilets anchor structure.<br><br>
-					
-					<strong>The CLEAR STUDIO</strong> was designed as a traveling urban pop-up studio that can attach to each of the city's anchor public toilets structures. The studio's transparency allows for the participation of residents and passers-by alike and can enable the exposure of up and coming musicians. The constant change of the studio's location could contribute to a variety of urban activities (such as Tel Aviv's yearly "Book Week", Marathons, Rallies, etc.) and can also act as a generator for cultural activity in impoverished areas of the city.
-					
-				</div>			
-			</div>
-			<div id="gallery_CLEAR-STUDIO">
-				<li title="Project Video" data-thumb="projects/CLEAR STUDIO/thumb/CLEAR STUDIO VIDEO.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1mJKqINICsbjUB9GDpL9wZ1n-TNFlGbBv?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/CLEAR STUDIO/thumb/Presentation.png">
-				<iframe id="pres-STUDIO" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/1a90rINcVmxKmfkacZzyzz-z8oa56FgpD2sNYWWrYKcs/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="View From Rothschild Blvd" data-thumb="">
-					<img class="lazy" data-src="projects/CLEAR STUDIO/View From Rothschild Blvd.jpg"/>
-				</li>
-				<li title="View From Ha-Heshmonaim" data-thumb="">
-					<img class="lazy" data-src="projects/CLEAR STUDIO/View From Ha-Heshmonaim.jpg"/>
-				</li>
-				<li title="Night View 1" data-thumb="">
-					<img class="lazy" data-src="projects/CLEAR STUDIO/Night View.jpg"/>
-				</li>
-				<li title="Night View 2" data-thumb="">
-					<img class="lazy" data-src="projects/CLEAR STUDIO/Night View 2.jpg"/>
-				</li>
-				<li title="Interior View" data-thumb="">
-					<img class="lazy" data-src="projects/CLEAR STUDIO/Interior View.jpg"/>
-				</li>
-				<li title="Building Phases" data-thumb="">
-					<img class="lazy" data-src="projects/CLEAR STUDIO/Building Phases.jpg"/>
-				</li>
-			</div>
-			
-			<!-- HS-BUILDING -->
-			<div id="about_HS-BUILDING">
-				<div class="textTitle">
-					<h1>Health Sciences Building</h1>
-					<h3>Urban layout and planning for multiple Educational Buildings</h3>
-					<span class="credit">
-						Client: Yavne Municipality, Israel.<br/>
-						Project led by Arch. Alessya Tonetti, Tom Melloul, Bea Architects &amp; Town Planners, 2017<br/>
-					</span>
-				</div>
-				<div class="textScroll">
-					In recent years, The Israeli health field suffered an increasing shortage of academically trained personnel in hospitals and community clinics. As a prominent leader in higher education, The Academic College of Tel Aviv-Yaffo sought to deal with this issue by establishing a new building for Health Sciences.<br><br>
-					
-					Our studio was commissioned to design an innovative, technologically advanced new building in a challenging footprint, alongside producing an extensive brochure for potential donors.<br><br>
-					
-					<strong>The Health Sciences Building</strong>'s design aims to fundamentally connect and respond to its environment to promote efficiency and health. Rather than approaching the building as a “sealed box,” the Building’s envelope and materials were designed to accommodate Jaffa’s local weather and the site’s natural proximity to the seaside.<br><br>
-					
-					During the design process, several of the core decisions focused on our ability to harness the building's natural ventilation potential, given its potential ability to substantially reduce energy use and improve thermal comfort. The design itself utilized innovative energy modeling to allow for a more accurate prediction of the natural ventilation potential of the local environment. By utilizing a parametric design process and advanced simulations we were able to merge an ecological approach with the same level of accuracy as a mechanically driven structure. 
-				</div>
-			</div>
-			<div id="gallery_HS-BUILDING">
-				<li title="Project Video" data-thumb="projects/HS BUILDING/thumb/VIDEO.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/1D_5nIPodXESDfUsI2Zm7_DXsYURFknly?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Doner Brouchure" data-thumb="projects/HS BUILDING/thumb/Presentation.png">
-				<iframe id="pres-HS" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/1npJZCwfwwbXmuau-zgsEddEqTo9VrRkIc_ktrAGSylw&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Section" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/Section.jpg"/>
-				</li>
-				<li title="Parking Floor" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/-1 FLOOR.jpg"/>
-				</li>
-				<li title="Ground Floor" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/0 GROUND FLOOR.jpg"/>
-				</li>
-				<li title="1st Floor" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/1ST FLOOR.jpg"/>
-				</li>
-				<li title="2nd Floor" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/2ND FLOOR.jpg"/>
-				</li>
-				<li title="3rd/4th Floor" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/3RD FLOOR.jpg"/>
-				</li>
-				<li title="5th Floor" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/5TH FLOOR.jpg"/>
-				</li>
-				<li title="Roof Floor" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/ROOF FLOOR.jpg"/>
-				</li>
-				<li title="Perspective View" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/RENDER_1 - Photo.jpg"/>
-				</li>
-				<li title="Perspective View" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/RENDER_2 - Photo.jpg"/>
-				</li>
-				<li title="Perspective View" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/RENDER_3 - Photo.jpg"/>
-				</li>
-				<li title="Perspective View" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/RENDER_4 - Photo.jpg"/>
-				</li>
-				<li title="Perspective View" data-thumb="">
-					<img class="lazy" data-src="projects/HS BUILDING/RENDER_5 - Photo.jpg"/>
-				</li>
-			</div>
-			
-			<!-- NEOT-SHAMIR -->
-			<div id="about_NEOT-SHAMIR">
-				<div class="textTitle">
-					<h1>Neot Shamir</h1>
-					<h3>Urban layout and planning for multiple Educational Buildings</h3>
-					<span class="credit">
-						Client: Yavne Municipality, Israel.<br/>
-						Project led by Arch. Alessya Tonetti, Bea Architects &amp; Town Planners, 2017<br/>
-					</span>
-				</div>
-				<div class="textScroll">
-					Our studio was asked to participate in an invite-only competition for the planning of multiple educational buildings and their urban layout (3,400 sqm) in Neot Shamir, Yavne, Israel. The buildings' programs included an 18-classroom elementary school and a 5-classroom kindergarten cluster.<br><br>
-					
-					As a member of the design team led I had an integral role in the planning &amp; design process for the 18-class elementary school, which our studio was later granted to fully plan and is currently being built. 
-				</div>
-			</div>
-			<div id="gallery_NEOT-SHAMIR">
-				<li title="Project Video" data-thumb="projects/NEOT SHAMIR/thumb/Yavne Video.webp">
-					<video controls preload="none"><source src="https://www.googleapis.com/drive/v3/files/13TgAT7oYSrYRoiLoMX9lrt568PyVHEJ1?alt=media&key=AIzaSyCStRb9-OunZqSxMbbl9eNJJE4WIoo3z_E" type="video/mp4"/></video>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/NEOT SHAMIR/thumb/Presentation.png">
-				<iframe id="pres-Yavne" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/1zS2ukz2UZNp0t3vdszCHgEPxByyeMVT5oYCax1HT110/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Kindergarden" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/FENCE-BUILDING.jpg"/>
-				</li>
-				<li title="Kindergarden Interior" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/gan_int.jpg"/>
-				</li>
-				<li title="Kindergarden" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/GAN-FRONT-VIEW3.jpg"/>
-				</li>
-				<li title="Kindergarden" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/GAN-TOP VIEW.jpg"/>
-				</li>
-				<li title="Kindergarden Section" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/Kindergarten_section_1-10-03.jpg"/>
-				</li>
-				<li title="School Entrance" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/school entrance.jpg"/>
-				</li>
-				<li title="School Interior" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/school-in-3.jpg"/>
-				</li>
-				<li title="School Layout" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/school-park.jpg"/>
-				</li>
-				<li title="School Section" data-thumb="">
-					<img class="lazy" data-src="projects/NEOT SHAMIR/section_1-500-02.jpg"/>
-				</li>
-			</div>
-			
-			<!-- HADASSIM -->
-			<div id="about_HADASSIM">
-				<div class="textTitle">
-					<h1>Hadassim Neighberhood</h1>
-					<h3>Urban building Scheme 250A</h3>
-					<span class="credit">
-						Client: Even Yehuda Municipality, Israel.<br/>
-						Project led by Arch. Tom Melloul, Bea Architects &amp; Town Planners, 2017<br/>
-					</span>
-				</div>
-				<div class="textScroll">
-					An urban scheme for the new <strong>Hadassim Neighborhood</strong>, in the north of Even Yehuda, which consists of 474 housing units.<br><br>
-					
-					As the project leader, I was in charge of detailed planning, consultant coordination, and the submission of an urban plan and spatial regulations to the local planning committee. 
-				</div>
-			 </div>
-			<div id="gallery_HADASSIM">
-				<li title="Urban Scheme" data-thumb="">
-					<img class="lazy" data-src="projects/HADASSIM/eyh_1 - Photo.jpg"/>
-				</li>
-				<li title="Project Presentation" data-thumb="projects/HADASSIM/thumb/Presentation.png">
-				<iframe id="pres-Hadassim" class="iframe-pres lazy" data-src="https://docs.google.com/presentation/d/1_-_LNPK_3sZMU3o5q2GGRRAwDJfP22SGP7vWBkDuagc/preview?rm=embed&hl=en#slide=id.p1" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</li>
-				<li title="Perspective View 1" data-thumb="">
-					<img class="lazy" data-src="projects/HADASSIM/eyh_2 - Photo.jpg"/>
-				</li>
-				<li title="Perspective View 2" data-thumb="">
-					<img class="lazy" data-src="projects/HADASSIM/eyh_3 - Photo.jpg"/>
-				</li>
-			</div>
-		</div>
-		
-		<!-- Contact -->
-		<article id="contact">
-			<div class="rTable">
-				<div class="rTableRow">
-					<div class="rTableCell">
-						<h2 class="major">Contact</h2>
-					</div>
-				</div>
-			</div>
-
-			<form target="_blank" method="post" action="https://formspree.io/xvowedoo">
-				<div class="fields">
-					<div class="field half">
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name" />
-					</div>
-					<div class="field half">
-						<label for="email">Email</label>
-						<input type="text" name="_replyto" id="email" />
-					</div>
-					<div class="field">
-						<label for="message">Message</label>
-						<textarea name="message" id="message" rows="4"></textarea>
-					</div>
-				</div>
-				<ul class="actions">
-					<li>
-						<input type="submit" value="Send Message" class="primary" />
-					</li>
-					<li>
-						<input type="reset" value="Reset" />
-					</li>
-				</ul>
-			</form>
-			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-			</ul>
-		</article>
+			</a> </div>
+		<button class="menu" id="Pages" aria-label="Main Menu">
+		<svg width="100" height="100" viewBox="0 0 100 100">
+			<path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+			<path class="line line2" d="M 20,50 H 80" />
+			<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+		</svg>
+		</button>
 	</div>
+</div>
+<!-- /Wrapper --> 
+
+<!-- Sections -->
+<div id="fullpage"> 
 	
-	<!-- Footer -->
-	<footer id="footer"><span class="copyright">Designed &amp; Coded by Tom Melloul, 2020.</span></footer>
+	<!-- Home -->
+	<section class="section home" style="" data-anchor="intro">
+		<div class="slide" data-anchor="home">
+			<div id="content">
+				<header id="header">
+					<div id="logo" class=""> 
+					</div>
+					<div class="center absolute">
+						<h1>Tom Melloul</h1>
+						<h3>Architect &amp; Creative Coder</h3>
+						<div class="btn view-right"><a href="#">About</a></div>
+					</div>
+				</header>
+			</div>
+			
+			<!-- Scroll Arrow Animation --> 
+			<a href="#" class="ca3-scroll-down-link ca3-scroll-down-arrow view-down" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a> </div>
+		<div class="slide" data-anchor="about">
+			<div class="center relative white">
+				<div class="about" id="prj-about" style="">
+					<div class="aboutText" style="">
+						<div class="textTitle">
+							<h1>About</h1>
+						</div>
+						<div class="textScroll">
+							<div class="expandable">
+								<h2-3>BIO</h2-3>
+								<div>
+									
+									<p>
+										Israeli born architect and creative coder. Holds a vast experience in design, fine arts, data analysis and programming. A firm believer in exploring and combining a wide array of practises, specifically within the intersection technology and art.
+									</p>
+									
+									<p>
+										Tom first ventured into the world of programming while working as a BI Developer, soon after graduating from <em>Thelma Yellin High School of the Arts</em>. During that time, he also produced electronic music, organized events and regularly performed under the stage name of <em>Tomba</em>. Ensuing his growing success and relocation to Europe, Tom has appeared on hundreds of stages all over the world, while garnering millions of views and collaborating with prominent names in the electronic music industry.
+									</p>
+									
+									<p>
+										Soon after his return to Israel, Tom began his architecture studies where he was first introduced to parametric design. His rich background in creative software and coding has enabled him to quickly master generative design tools, and tutor students from various disciplines during and after his studies. Today, Tom acts as a Project Designer and Parametric Specialist at Bea Architects &amp; Town Planners.
+									</p>
+									
+									<table class="topnone">
+										<tbody class="topnone">
+											<tr class="topnone">
+												<td class="topnone">Tom is currently based in:</td>
+												<td class="topnone"><table style="padding-left: calc(var(--tSize)*3) !important;">
+														<tbody class="topnone">
+															<tr class="topnone">
+																<td class="topnone strike"> Rotterdam, NL. </td>
+															</tr>
+															<tr class="topnone">
+																<td class="topnone strike"> Paris, FR. </td>
+															</tr>
+															<tr class="topnone">
+																<td class="topnone"> Tel-Aviv, ISR. </td>
+															</tr>
+														</tbody>
+													</table></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="expandable">
+								<h2-3>SKILLS</h2-3>
+								<div>
+									<table class="rows">
+										<tbody>
+											<tr>
+												<th>3D &amp; CAD</th>
+												<td>Rhino, Revit, Autocad, Sketchup, Cinema4D, 3ds Max</td>
+											</tr>
+											<tr>
+												<th>RENDERING</th>
+												<td>V-ray, Lumion, Octane</td>
+											</tr>
+											<tr>
+												<th>IMAGE &amp; VIDEO EDITING</th>
+												<td>Photoshop, Illustrator, Indesign, After Effects</td>
+											</tr>
+											<tr>
+												<th>GIS</th>
+												<td>QGIS, CityEngine</td>
+											</tr>
+											<tr>
+												<th>VPL</th>
+												<td>Grasshopper, VVVV, Processing, Arduino IDE</td>
+											</tr>
+											<tr>
+												<th>SCRIPTING</th>
+												<td>Python, C/C++/C#, JS, HTML, CSS, PL/SQL, GCODE</td>
+											</tr>
+											<tr>
+												<th>GAME ENGINES</th>
+												<td>Unreal Engine, Unity</td>
+											</tr>
+											<tr>
+												<th>3D PRINTING</th>
+												<td>Cura, Simplify3D</td>
+											</tr>
+											<tr>
+												<th>DAWs</th>
+												<td>Cubase, Abelton Live</td>
+											</tr>
+											<tr>
+												<th>LANGUAGES</th>
+												<td><span style="float: left; padding: 0 !important; width:8rem !important;">Native Speaker:</span> Hebrew<br/>
+													<span style="float: left; padding: 0 !important; width:8rem !important;">Highly Fluent:</span> English<br/>
+													<span style="float: left; padding: 0 !important; width:8rem !important;">Conversant:</span> French, Dutch. </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="expandable">
+								<h2-3>EDUCATION</h2-3>
+								<div>
+									<table class="rows th-nowrap">
+										<tbody>
+											<tr>
+												<th>2014 - 2019</th>
+												<td><span class="strong">B.Arch in Architecture</span>, <em>Tel Aviv University's Azrieli School of Architecture</em>, Tel-Aviv, Israel.</td>
+											</tr>
+											<tr>
+												<th>2001 - 2005</th>
+												<td><span class="strong">Major in Visual Arts</span>, <em>Thelma Yellin High School of the Arts</em>, Givatayim, Israel</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="expandable">
+								<h2-3>WORKING EXPERIENCE</h2-3>
+								<div>
+									<table class="rows th-nowrap">
+										<tbody>
+											<tr>
+												<th>2016 - 2020</th>
+												<td><span class="strong">BEA Architects &amp; Town Planners</span>
+													<br><em>Project Designer &amp; Parametric Specialist</em><br>
+													<span class="details"> Joined the studio as a student. A member of the studio's creative design team. Led and participated in multiple projects in an array of scales and fields, including urban planning and complex building design. In late 2019, was appointed as the studio's Parametric Specialist and overlooked all technological aspects of the studio. </span></td>
+											</tr>
+											<tr>
+												<th>2018 - 2019</th>
+												<td><span class="strong">Self Employed</span><br><em>Instructor &amp; Coordinator</em><br>
+													<span class="details"> Instructed, coordinated and created multiple course curricula for Rhinoceros 3D, Grashopper for Beginners and Grasshopper for Proffesionals. </span></td>
+											</tr>
+											<tr>
+												<th>2018</th>
+												<td><span class="strong">Architecture Department at the Bezalel Academy</span><br><em>Teaching Assitant</em><br>
+													<span class="details">Tutored 4th &amp; 5th year students at <em>PUL L (Prametric Urban Landscape Lab)</em> during the year's 1st semester.  Created in depth technical tutorials and provided technical one-on-one guidance for students throughout the semester. </span></td>
+											</tr>
+											<tr>
+												<th>2013 - 2016</th>
+												<td><span class="strong">Malam Team</span><br><em>BI Specialist</em><br>
+													<span class="details"> Developed and maintained dashboards, reports, and dimensional data models for local and international clients. Planned data warehouses using ETL platforms and best practices to reflect corporate managerial reporting requirements. Created &amp; customized tailor-made UX solutions for data visualization and report usability. Trained customers and employees in various aspects of business intelligence. </span></td>
+											</tr>
+											<tr>
+												<th>2008 - 2014</th>
+												<td><span class="strong">Tomba</span><br><em>Owner, Producer &amp; DJ</em><br>
+													<span class="details"> World-renowned electronic music producer, 3 times in Beatport top 10 Dubstep Charts, over 1M views on Youtube and Spotify, and more than 25K fans on Facebook. World touring DJ with live performances in over than 30 cities in 3 continents. Hired a staff of three (booking agent, manager and accountant). </span></td>
+											</tr>
+											<tr>
+												<th>2007 - 2010</th>
+												<td><span class="strong">Datamine</span><br><em>Graphic Designer, BI Reporting Specialist</em><br>
+													<span class="details"> Planned, Designed and Assimilated Cognos KPI and Cube systems Reporting for local and international clients. Developed customized &amp; tailor-made UX solutions for data visualization and report usability, using built-in methodologies. </span></td>
+											</tr>
+											<tr>
+												<th>2006 - 2008</th>
+												<td><span class="strong">Alphamale Primates</span><br><em>Co-founder,&nbsp; Producer &amp; DJ&nbsp;</em><br>
+													<span class="details"> Organized &amp; produced nightlife dance events in local clubs. Hired a staff of 4. </span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="profileCanvas">
+						<video id="profileVideo"  muted disablepictureinpicture data-autoplay playsinline autoplay poster="about/about-poster.jpg">
+							<source data-src="about/about.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Works --> 
+	
+		<!-- Animism -->
+		<section class="section works" data-anchor="animism">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>ANIMISM</h1>
+						<h3>The living City</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay poster="works/ANIMISM/Video/BG_Poster.jpg"playsinline autoplay>
+					<source data-src="works/ANIMISM/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-animism">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>ANIMISM</h1>
+									<h3>The Living City</h3>
+									<span class="credit"> Nitsan Bartov, Tom Melloul<br>
+									BisTAU Studio led by Arch. Moti Bodek, 2019 </span>
+								</div>
+								<div class="textScroll">
+									<p>As we enter the 21ˢᵗ century, humanity’s aspiration for stability is increasingly shifting towards a desire for change and constant stimulation.</p>
+									<p>The growing gap between these perceptions is ironically often manifested in newly built urban environments, with Israel being no exception; A distinct example of which is Netanya’s new <em>Ir Yamim</em> district - the project's case study.</p>
+									<p>ANIMISM aspires to re-animate lifeless artificial urban landscapes and bridge the gap between them and nature. By employing an algorithm-driven protocell system, the project aims to provide the city with the capabilities of interpreting space through people, and dynamically populate inanimate voids on the go.</p>
+									<p>The animated city is active, dynamic, and consistently relevant; It adapts, reacts, and encourages a sense of empathy between the people and their environment.</p>
+									<p><span class="strong">ANIMISM is the birth of the living city.</span></p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/ANIMISM/Video/MAin_Poster.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/1s08NE3yGKwtrgofg1tWRmRVX10VxUDmm?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-animism" class="projectGallery">
+							<img class="projPres" src="assets/images/Presentation.jpg" data-src="assets/images/Presentation.jpg" 
+										 alt="Project Presentation" 
+										 data-iframe="https://docs.google.com/presentation/d/e/2PACX-1vQ7nI3U79hwAxpwvl6Brql8t7gLZGI8cBQF-GN2Riohim9eWuMFdPpwLm2xhQ6YVOwpyIcCW8LTv9o7/embed?start=false&loop=false&delayms=2000&hl=en"/>
+							
+							<video loop playsinline autoplay data-autoplay 
+										   alt="Macro Formation Video" poster="works/ANIMISM/thumb/Video-Macro.jpg" data-boxsrc="https://www.googleapis.com/drive/v3/files/1JwPNRE0-IwOVMwbdHMQ9mgcG2EansLLW?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/ANIMISM/Video/Macro.webm" type="video/webm"/>
+							</video>
+							
+							<img src="works/ANIMISM/Render.jpg" 
+										 data-src="works/ANIMISM/Render.jpg" 
+										 alt="Render"/>
+							
+							<img src="works/ANIMISM/Section.jpg"
+								 data-src="works/ANIMISM/Section.jpg"
+								 alt="Section"/>
+							
+							<img src="works/ANIMISM/Mapping.jpg" 
+										 data-src="works/ANIMISM/Mapping.jpg" 
+										 alt="Animistic Mapping"/>
+							
+							<img src="works/ANIMISM/Exploded.jpg" 
+										 data-src="works/ANIMISM/Exploded.jpg" alt="Urban Analysis"/>
+							
+							<img src="works/ANIMISM/thumb/Algorithm.jpg" 
+										 data-src="works/ANIMISM/Algorithm.jpg" 
+										 alt="Algorithm"/>
+							
+							<img src="works/ANIMISM/thumb/Protocell.jpg"
+								 data-src="works/ANIMISM/Protocell.jpg"
+								 alt="Protocell Architecture"/>
+							
+							<img src="works/ANIMISM/thumb/Formation.jpg" 
+										 data-src="works/ANIMISM/Formation.jpg" 
+										 alt="Micro Formation"/>
+
+							<video loop playsinline autoplay data-autoplay alt="Micro Formation Video" poster="works/ANIMISM/thumb/Video-Micro.jpg" data-boxsrc="https://www.googleapis.com/drive/v3/files/1OnROMDsb3td6Pl_d3DwOoVOU2L_HXztm?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/ANIMISM/Video/Micro.webm" type="video/webm"/>
+							</video>
+							
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- WENDY -->
+		<section class="section works" data-anchor="WENDY">
+			<div class="slide">
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/WENDY/Video/Poster.jpg">
+					<source data-src="works/WENDY/Video/Video.webm" type="video/webm">
+				</video>
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>#MeetWENDY</h1>
+						<h3>The Living Vending Machine</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-wendy">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>#MeetWENDY</h1>
+									<h3>The Living Vending Machine</h3>
+									<span class="credit">Nitsan Bartov, Lealla Solomon, Yaron Zakay, Tom Melloul<br/>
+									Digital Studio led by Prof. Arch. Eran Neuman &amp; Arch. Tamir Lavie, 2017</span>
+								</div>
+								<div class="textScroll">
+									<p>The concept of WENDY was born in Tokyo, Japan, during a field trip as a part of the Digital Studio. The studio focuses on the exploration of the relationship between the physical and the virtual dimensions, through experimental design research and digital fabrication.</p>
+
+									<p><span class="strong">#MeetWENDY</span> is an interactive full-scale installation that allows observers to get inside a vending machine - a typical Tokyoite phenomenon - and experience it coming to life by interacting with it, getting to know it, and coming out as the product of their own personal encounter.</p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/WENDY/video/Main Poster.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/1rodUAnKLgbP_euyCKA5p9iElN3Gp3M-Y?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-wendy" class="projectGallery">
+							<img class="projPres" src="assets/images/Presentation.jpg" data-src="assets/images/Presentation.jpg" 
+										 alt="Project Presentation" 
+										 data-iframe="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dhfdqy0n30"/>
+							<video loop muted playsinline autoplay data-autoplay 
+										   alt="Interior Experience Video" poster="works/WENDY/Video/Poster.jpg" data-boxsrc="https://www.googleapis.com/drive/v3/files/1TA64Xt1uGhC7PUcSvydikISgeO5yf7dx?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/WENDY/Video/Video.webm" type="video/webm"/>
+							</video>
+							<video loop muted playsinline autoplay data-autoplay 
+										   alt="Point of View Video" poster="works/WENDY/video/POV Poster.jpg" data-boxsrc="https://www.googleapis.com/drive/v3/files/1cNcpwKzmNy6uSIkn_EYnvvl4GoMrGUmz?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/WENDY/video/POV Video.webm" type="video/webm"/>
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EVO -->
+		<section class="section works" data-anchor="EVO">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>EVO</h1>
+						<h3>Living Evolution</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/EVO/Video/Poster.jpg">
+					<source data-src="works/EVO/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-evo">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>EVO</h1>
+									<h3>Living Evolution</h3>
+									<span class="credit">Eka Janashia, Tom Melloul<br/>
+									Residential Studio led by Arch. Leonardo Kelijman &amp; Arch. Dafna Matok, 2017</span>
+								</div>
+								<div class="textScroll">
+									<p>Urban environments have seen immense growth in population density in recent decades, leading to an extensive vertical expansion of the urban residential building.</p>
+
+									<p>As part of this global trend, Tel-Aviv's homes have increasingly risen higher since the 2000s. While some neighberhoods adapted well, others have essentialy become gated communities. In light of this phenomenon, we've set out to examine an alternative spatially expandable urban model for communal living.</p>
+
+									<p>Firstly, we've interconnected the city's green spaces, a quintessential Tel-Avivian urban generator, in an attempt to re-read the city. By converting this 2D logic into spatial tesselation, we produced a porous network that could expand and contract. Each geometrically unique cell could interchangeably act as a dwelling unit, open space, or merge with neighboring cells to accommodate for larger-scale activities - giving birth to <span class="strong">EVO - Living Evolution.</span></p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/EVO/video/Poster-Main.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/16TiJiuxluGtxkSXkrQ2miy1DUke3QeG4?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-evo" class="projectGallery">
+							<img class="projPres" src="assets/images/Presentation.jpg"
+								 data-src="assets/images/Presentation.jpg"
+								 alt="Project Presentation"
+								 data-iframe="https://docs.google.com/presentation/d/e/2PACX-1vTtVW4Nyz_1FiaoW20s7zUM5n6qvb88lFLPr9EvSfD4WxXU6xv0vlvhWcvJbc6wdgo_cH2FyDc2OvC9/embed?start=false&loop=false&delayms=2000&hl=en"/>
+							<img src="works/EVO/Render 02.jpg"
+								 data-src="works/EVO/Render 02.jpg"
+								 alt="Perspective View"/>
+							<img src="works/EVO/thumb/Render 01.jpg"
+								 data-src="works/EVO/Render 01.jpg"
+								 alt="Perspective View"/>
+							<video loop playsinline autoplay data-autoplay
+								   alt="Cellular Experiments"
+								   poster="works/EVO/video/Cel Experiments.jpg"
+								   data-boxsrc="https://www.googleapis.com/drive/v3/files/1T71mEuS-dX9LLrUyXv-x3P3AVvCUlqAo?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/EVO/video/Cel Experiments.webm" type="video/webm"/>
+							</video>
+							<img src="works/EVO/thumb/Semi Orthogonal Cell Creation.jpg"
+								 data-src="works/EVO/Semi Orthogonal Cell Creation.jpg"
+								 alt="Semi Orthogonal Cell Creation"/>
+							<img src="works/EVO/thumb/Area Plan.jpg"
+								 data-src="works/EVO/Area Plan.jpg"
+								 alt="Area Plan"/>
+							<img src="works/EVO/thumb/Ground Floor.jpg"
+								 data-src="works/EVO/Ground Floor.jpg"
+								 alt="Ground Floor"/>
+							<img src="works/EVO/thumb/Generic Floor.jpg"
+								 data-src="works/EVO/Generic Floor.jpg"
+								 alt="Generic Floor"/>
+							<img src="works/EVO/thumb/Underground Floor.jpg"
+								 data-src="works/EVO/Underground Floor.jpg"
+								 alt="Underground Floor"/>
+							<img src="assets/images/work/EVO/thumb/Section A.jpg"
+								 data-src="works/EVO/Section A.jpg"
+								 data-cSize="45%" 
+								 alt="Section A"/>
+							<img src="works/EVO/thumb/Section B.jpg"
+								 data-src="works/EVO/Section B.jpg"
+								 data-cSize="45%" 
+								 alt="Section B"/>
+							<img src="works/EVO/thumb/Apartment C.jpg"
+								 data-src="works/EVO/Apartment A.jpg"
+								 alt="Apartment A Plan"/>
+							<img src="works/EVO/thumb/Apartment C.jpg"
+								 data-src="works/EVO/Apartment B.jpg"
+								 alt="Apartment B Plan"/>
+							<img src="works/EVO/thumb/Apartment C.jpg"
+								 data-src="works/EVO/Apartment C.jpg"
+								 alt="Apartment C Plan"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EAAA -->
+		<section class="section works" data-anchor="EAAA">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>EAAA</h1>
+						<h3>Elifelet Academy of Applied Arts</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/EAAA/Video/Poster.jpg">
+					<source data-src="works/EAAA/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-eaaa">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>EAAA</h1>
+									<h3>Elifelet Academy of Applied Arts</h3>
+									<span class="credit">Nitsan Bartov, Rotem Arad, Tom Melloul<br/>
+									Complex Studio led by Arch. Rami Gil &amp; Arch. Leonardo Kelijman, 2018</span>
+								</div>
+								<div class="textScroll">
+									<p>Israel's ongoing light railway project is set to have a major impact on future urban life in the country and it's financial capital Tel Aviv. Accordingly, planned railway stations along its route hold an immense potential as financial and cultural urban generators.</p>
+					
+									<p>Such opportunity is examplified in the future <em>Elifelet Station</em>, which is located in a <em>No Man's Land</em> embedded between three significant and essentially different Tel-Avivian neighberhoods: Neve Tzedek - the affluent; Florentin - the young and saturated; and North Jaffa - disparaged &amp; full of latent promise.</p>
+
+									<p><span class="strong">The Elifelet Academy of Applied Arts</span> aims to maximize the station's potential by infusing it with an academic, cultural and commercial urban hub. In addition to offering affordable student housing, EAAA fully engages at street level by combining relevant commercial and cultural programs directly linked to academic functions above.</p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/EAAA/video/Poster.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/1KlTlWK8WSvWNCAyT-p9j9D5CAshPAA88?alt=media&amp;key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-eaaa" class="projectGallery">
+							<img class="projPres" src="assets/images/Presentation.jpg"
+								 data-src="assets/images/Presentation.jpg"
+								 alt="Project Presentation"
+								 data-iframe="https://docs.google.com/presentation/d/e/2PACX-1vT5FU6q8MDjfr50VE7t-bQidwgPPhogrZLOAHLj9tBNNMhK0sgb4X1GvCyJF4ejk9TlQH0hZ6ymbSMi/embed?start=false&loop=false&delayms=2000&hl=en"/>
+							<img src="works/EAAA/thumb/Urban Strategy.jpg"
+								 data-src="works/EAAA/Urban Strategy.jpg"
+								 alt="Urban Strategy"/>
+							<img src="works/EAAA/thumb/Site Anaylsis.jpg"
+								 data-src="works/EAAA/Site Anaylsis.jpg"
+								 alt="Site Anaylsis"/>
+							<img src="works/EAAA/thumb/Exploded Diagram.jpg"
+								 data-src="works/EAAA/Exploded Diagram.jpg"
+								 alt="Exploded Diagram"/>
+							<img src="works/EAAA/thumb/Program Diagram.jpg"
+								 data-src="works/EAAA/Program Diagram.jpg"
+								 alt="Program Diagram"/>
+							<img src="works/EAAA/thumb/Section B.jpg"
+								 data-src="works/EAAA/Section B.jpg"
+								 alt="Section B"/>
+							<img src="works/EAAA/thumb/Section A.jpg"
+								 data-src="works/EAAA/Section A.jpg"
+								 alt="Section A"/>
+							<img src="works/EAAA/thumb/0 Ground Floor.jpg"
+								 data-src="works/EAAA/0 Ground Floor.jpg"
+								 alt="Ground Floor"/>
+							<img src="works/EAAA/thumb/2nd Floor.jpg"
+								 data-src="works/EAAA/2nd Floor.jpg"
+								 alt="2nd Floor"/>
+							<img src="works/EAAA/thumb/3rd Floor.jpg"
+								 data-src="works/EAAA/3rd Floor.jpg"
+								 alt="3rd Floor"/>
+							<img src="works/EAAA/thumb/4th Floor.jpg"
+								 data-src="works/EAAA/4th Floor.jpg"
+								 alt="4th Floor"/>
+							<img src="works/EAAA/thumb/5th Floor.jpg"
+								 data-src="works/EAAA/5th Floor.jpg"
+								 alt="5th Floor"/>
+							<img src="works/EAAA/thumb/Render 01.jpg"
+								 data-src="works/EAAA/Render 01.jpg"
+								 alt="Night-Time Perspective"/>
+							<img src="works/EAAA/thumb/Render 02.jpg"
+								 data-src="works/EAAA/Render 02.jpg"
+								 alt="Studios' Park View"/>
+							<img src="works/EAAA/thumb/Render 03.jpg"
+								 data-src="works/EAAA/Render 03.jpg"
+								 data-cSize="100%"
+								 alt="Perspective"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MIST -->
+		<section class="section works" data-anchor="MIST">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>MIST</h1>
+						<h3>Talpiot Bath House</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/MIST/Video/Poster.jpg">
+					<source data-src="works/MIST/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-mist">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>MIST</h1>
+									<h3>Talpiot Bath House</h3>
+									<span class="credit">Noa Eisenberg, Tom Melloul<br/>
+									Interior Design Studio led by Arch. Guy Re Moor, 2018</span>
+								</div>
+								<div class="textScroll">
+									<p>Talpiot market <em>(Arch. Moshe Gerstel, 1940)</em> has long served as one of Haifa’s most influential cultural landmarks. Sadly, this fine specimen of the International Style that once housed a bustling market has deteriorated since the 80's to near-abandonment in recent years.</p>
+
+									<p>The symmetric structure, despite its current disfunction, beares a striking resemblance to ancient classical bathhouse layouts. As many bathouses possese mysterious qualities to them, so does Talpiot: It tells a mystical story of constant transformation through its worn-out components.</p>
+
+									<p>Stagnant water, crumbling walls, damp concrete, and broken glass - these, and many more, contribute to a Talpiot's aura of patina that encapsulates its concrete shell. The building's aesthetics of ruin and decay captivates one’s imagination, as it becomes one with nature’s elements. Talpiot's materials bind with water, light, and vegetation to ultimately transcend into metamaterials - laying the foundations for <span class="strong">MIST - Talpiot’s Bathhouse</span>.</p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/MIST/video/Poster.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/1H07O9huTeBVkYM1lWSTqUCcC_NunMDk4?alt=media&amp;key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-mist" class="projectGallery">
+							<img class="projPres" src="assets/images/Presentation.jpg"
+								 data-src="assets/images/Presentation.jpg"
+								 alt="Project Presentation"
+								 data-iframe="https://docs.google.com/presentation/d/e/2PACX-1vQyioUKQoqwT2wLMRDU3jUN5aY7TIFR8K20d7vZWGLWqMoHze-QU39dhScDCTE1wNanTaoMO_2LYIuA/embed?start=false&loop=false&delayms=2000&hl=en"/>
+							
+							<video loop playsinline autoplay data-autoplay
+								   alt="Early Concept Draft 1"
+								   poster="works/MIST/Video/Draft 1.jpg"
+								   data-boxsrc="https://www.googleapis.com/drive/v3/files/1gXELoY0hLu8EhB8OS3pdkCuIN-CicJTe?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/MIST/Video/Draft 1.webm" type="video/webm"/>
+							</video>
+							<video loop playsinline autoplay data-autoplay
+								   alt="Early Concept Draft 2"
+								   poster="works/MIST/Video/Draft 2.jpg"
+								   data-boxsrc="https://www.googleapis.com/drive/v3/files/1SBrYwlrfMjoJNfEp3YfXSFq9tZNKm5XA?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/MIST/Video/Draft 2.webm" type="video/webm"/>
+							</video>
+							
+							<img src="works/MIST/thumb/Render Roof.jpg"
+								 data-src="works/MIST/Render Roof.jpg"
+								 alt="Roff Pool View"/>
+							<img src="works/MIST/thumb/Render Main Hall.jpg"
+								 data-src="works/MIST/Render Main Hall.jpg"
+								 alt="Main Hall View"/>
+							<img src="works/MIST/thumb/Render Waterfall.jpg"
+								 data-src="works/MIST/Render Waterfall.jpg"
+								 alt="Steam Bath View"/>
+							<img src="works/MIST/thumb/Render Exterior.jpg"
+								 data-src="works/MIST/Render Exterior.jpg"
+								 alt="Exterior Perspective"/>
+
+							<img src="works/MIST/thumb/Area Plan.jpg"
+								 data-src="works/MIST/Area Plan.jpg"
+								 alt="Area Plan"/>
+							<img src="works/MIST/thumb/0 Ground Floor.jpg"
+								 data-src="works/MIST/0 Ground Floor.jpg"
+								 alt="Ground Floor Plan"/>
+							<img src="works/MIST/thumb/1st Floor.jpg"
+								 data-src="works/MIST/1st Floor.jpg"
+								 alt="1st Floor Plan"/>
+							<img src="works/MIST/thumb/2nd Floor.jpg"
+								 data-src="works/MIST/2nd Floor.jpg"
+								 alt="2nd Floor Plan"/>
+							<img src="works/MIST/thumb/Section.jpg"
+								 data-src="works/MIST/Section.jpg"
+								 alt="Section A"/>
+							<img src="works/MIST/thumb/Timeline Diagram.jpg"
+								 data-src="works/MIST/Timeline Diagram.jpg"
+								 alt="Timeline Diagram"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- UMAGUTI -->
+		<section class="section works" data-anchor="UMAGUTI">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>UMAGUTI</h1>
+						<h3>"Where There's Life"</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/UMAGUTI/Video/Poster.jpg">
+					<source data-src="works/UMAGUTI/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-umaguti">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>UMAGUTI</h1>
+									<h3>"Where There's Life"</h3>
+									<span class="credit">Nitsan Bartov, Yagev Langer, Tom Melloul<br/>
+									The Azrieli Global Studio Program,<br>
+										In collaboration with McGill University &amp;, The Technion.<br/>
+									Tutor: Arch. Tamir Lavie, 2016</span>
+								</div>
+								<div class="textScroll">
+									<p>This intensive 6-week course was an immersive design studio which included an excursion to the Canadian Subarctic, an area plentiful with minerals, most notably Iron Ore.</p>
+									
+									<p>Over the past decades, lax government regulations have allowed for unattended and overly intense mining, leaving behind barren and wounded soil, and a struggling, neglected, local community.</p>
+
+									<span class="strong">UMAGUTI</span> aims to heal the soil's open wounds while providing local communities with robust tools that will help them grow and prosper.</p>
+								
+									<p>Through parametric design, solar form-finding, and advanced building technologies, UMAGUTI puts abandoned mines to use and utilizes their unique footprint. The terrace-like topography coupled with a lightweight ETFE membrane allows to accomodate durable housing and sustainable sub-arctic farming that enables the cultivation of fresh local produce.</p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<div class="respIframe">
+									<iframe data-src="https://docs.google.com/presentation/d/e/2PACX-1vQtENx0Jx_0yLPMZLE8wpUmWK8Hw1qHOQn9R4WdcinmSZzAfb2aTLEzE6Ex_-uJ6HVfdcnporeSwyZA/embed?start=false&loop=false&delayms=3000&rm=minimal&hl=en" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+								</div>
+							</div>
+						</div>
+						<div id="gal-umaguti" class="projectGallery">
+							<!--<video loop playsinline autoplay data-autoplay
+								   alt="Birdseye View"
+								   poster="works/UMAGUTI/Video/Poster.jpg">
+								<source data-src="works/UMAGUTI/Video/Video.webm" type="video/webm"/>
+							</video>-->
+							
+							<video loop playsinline autoplay data-autoplay
+								   alt="ETFE Membrane Inflation & Smoothing"
+								   poster="works/UMAGUTI/video/Mesh Inflation.jpg"
+								   data-boxsrc="https://www.googleapis.com/drive/v3/files/1LlnLTU9D-Pew-d8sMgccmxy2hEu_sDr2?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/UMAGUTI/video/Mesh Inflation.webm" type="video/webm"/>
+							</video>
+							<video loop playsinline autoplay data-autoplay
+								   alt="Solar Form Finding"
+								   poster="works/UMAGUTI/video/Apartment Optimization.jpg"
+								   data-boxsrc="https://www.googleapis.com/drive/v3/files/1Fhn0qIyH6Uvyw8cn0YksA4UmW2EslpnG?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo">
+								<source data-src="works/UMAGUTI/video/Apartment Optimization.webm" type="video/webm"/>
+							</video>
+							
+							<img src="works/UMAGUTI/thumb/Birdseye View.jpg"
+								 data-src="works/UMAGUTI/Birdseye View.jpg"
+								 alt="Birdseye View"/>
+							
+							
+							<img src="works/UMAGUTI/thumb/Render Exterior.jpg"
+								 data-src="works/UMAGUTI/Render Exterior.jpg"
+								 alt="Exterior View"/>
+							<img src="works/UMAGUTI/thumb/Render Interior.jpg"
+								 data-src="works/UMAGUTI/Render Interior.jpg"
+								 alt="Interior View"/>
+							
+							
+							<img src="works/UMAGUTI/thumb/House Section.jpg"
+								 data-src="works/UMAGUTI/House Section.jpg"
+								 alt="House Section"/>
+							
+							
+							<img src="works/UMAGUTI/thumb/Diagram Concept.jpg"
+								 data-src="works/UMAGUTI/Diagram Concept.jpg"
+								 alt="Diagram Concept"/>
+							<img src="works/UMAGUTI/thumb/Advantages Diagram.jpg"
+								 data-src="works/UMAGUTI/Advantages Diagram.jpg"
+								 alt="Advantages Diagram"/>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CLEAR-STUDIO -->
+		<section class="section works" data-anchor="CLEAR-STUDIO">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>CLEAR STUDIO</h1>
+						<h3>A pop-up urban music studio</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/CLEAR STUDIO/Video/Poster.jpg">
+					<source data-src="works/CLEAR STUDIO/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-clear-studio">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>CLEAR STUDIO</h1>
+									<h3>A pop-up urban music studio</h3>
+									<span class="credit">Tom Melloul<br/>
+									Technology Studio B led by Simone Friedman, 2016</span>
+								</div>
+								<div class="textScroll">
+									<p>The Technology Studio focuses on the integrated design of a small structure with an emphasis on building technologies, materials, and design details. During the first part of the semester, the students designed a simple public toilets structure in large groups. During the 2nd part of the semester, each student was assigned to define and design a detachable pop-up function that will attach to the toilets anchor structure.</p>
+					
+									<p><span class="strong">The CLEAR STUDIO</span> was designed as a traveling urban pop-up studio that can attach to each of the city's anchor public toilets structures. The studio's transparency allows for the participation of residents and passers-by alike and can enable the exposure of up and coming musicians. The constant change of the studio's location could contribute to a variety of urban activities (such as Tel Aviv's yearly "Book Week", Marathons, Rallies, etc.) and can also act as a generator for cultural activity in impoverished areas of the city.</p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/CLEAR STUDIO/Video/Poster.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/1mJKqINICsbjUB9GDpL9wZ1n-TNFlGbBv?alt=media&amp;key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-clear-studio" class="projectGallery">
+							
+							<img class="projPres" src="assets/images/Presentation.jpg" data-src="assets/images/Presentation.jpg" 
+										 alt="Project Presentation" 
+										 data-iframe="https://docs.google.com/presentation/d/e/2PACX-1vS59n9dT82mlpwOOri73a_9L5XIR5ZhWzn-I74RZMg2UIBAS33o1A1epHYgpiromHwKWgLivyDG8kGs/embed?start=false&loop=false&delayms=2000&hl=en"/>
+							
+							<img src="works/CLEAR STUDIO/thumb/View From Rothschild Blvd.jpg"
+								 data-src="works/CLEAR STUDIO/View From Rothschild Blvd.jpg"
+								 alt="View From Rothschild Boulevard"/>
+							<img src="works/CLEAR STUDIO/thumb/View From Ha-Heshmonaim.jpg"
+								 data-src="works/CLEAR STUDIO/View From Ha-Heshmonaim.jpg"
+								 alt="View From Ha-Heshmonaim Street"/>
+							<img src="works/CLEAR STUDIO/thumb/Night View.jpg"
+								 data-src="works/CLEAR STUDIO/Night View.jpg"
+								 alt="Night View 1"/>
+							<img src="works/CLEAR STUDIO/thumb/Night View 2.jpg"
+								 data-src="works/CLEAR STUDIO/Night View 2.jpg"
+								 alt="Night View 2"/>
+							
+							<img src="works/CLEAR STUDIO/thumb/Interior View.jpg"
+								 data-src="works/CLEAR STUDIO/Interior View.jpg"
+								 alt="Interior View"/>
+							<img src="works/CLEAR STUDIO/thumb/Building Phases.jpg"
+								 data-src="works/CLEAR STUDIO/Building Phases.jpg"
+								 alt="Building Phases"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- HS-BUILDING -->
+		<section class="section works" data-anchor="HS-BUILDING">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>HS Building</h1>
+						<h3>Health Sciences Buidling</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/HS BUILDING/Video/Poster.jpg">
+					<source data-src="works/HS BUILDING/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-hs-building">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>HS Building</h1>
+									<h3>Health Sciences Buidling</h3>
+									<span class="credit">
+										Client: The Academic College of Tel Aviv-Yaffo.<br/>
+										Project leaders: Arch. Alessya Tonetti &amp; Arch. Tom Melloul.<br>
+										Studio: Bea Architects &amp; Town Planners, 2017<br/>
+									</span>
+								</div>
+								<div class="textScroll">
+									<p>Reacting to the increasing shortage of academically trained personnel in the Israeli health field, The Academic College of Tel-Aviv Yaffo has commissioned our studio to design an innovative new building in a challenging footprint, alongside producing an extensive brochure for potential donors.</p>
+									
+									<p>During the design proccess the studio focused on harnessing the building's natural ventilation potential in order to substantially reduce energy use and improve thermal comfort. By utilizing innovative energy modeling and advanced simulations, we were able to maximize the building's natural ventilation potential.</p>
+
+									<p><span class="strong">The Health Sciences Building</span>'s design aims to fundamentally connect and respond to its environment. The Building’s envelope and materials were designed to accommodate Jaffa’s local weather and the site’s natural seaside proximity.</p>
+
+									
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/HS BUILDING/Video/Poster.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/18GyX4DB1M_CgVM-EFFu6bgbAOmv7FRLy?alt=media&amp;key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-hs-building" class="projectGallery">
+							
+							<img class="projPres" src="assets/images/Presentation.jpg" data-src="assets/images/Presentation.jpg" 
+										 alt="Doner Brouchure" 
+										 data-iframe="https://docs.google.com/presentation/d/e/2PACX-1vSYHRWuTgwqBjYxYM3_Qi5dTfyarApbVrVxjqiCjDCSXXJYo_-87PQg4CyntXe11GB76syzPoL3tHGO/embed?start=false&loop=false&delayms=2000&hl=en"/>
+							
+							<img src="works/HS BUILDING/thumb/Section.jpg"
+								 data-src="works/HS BUILDING/Section.jpg"
+								 alt="Section"/>
+							<img src="works/HS BUILDING/thumb/-1 FLOOR.jpg"
+								 data-src="works/HS BUILDING/-1 FLOOR.jpg"
+								 data-csize="300px"
+								 alt="Underground Parking"/>
+							<img src="works/HS BUILDING/thumb/0 GROUND FLOOR.jpg"
+								 data-src="works/HS BUILDING/0 GROUND FLOOR.jpg"
+								 data-csize="300px"
+								 alt="Ground Floor"/>
+							<img src="works/HS BUILDING/thumb/1ST FLOOR.jpg"
+								 data-src="works/HS BUILDING/1ST FLOOR.jpg"
+								 data-csize="300px"
+								 alt="1st Floor"/>
+							<img src="works/HS BUILDING/thumb/2nd FLOOR.jpg"
+								 data-src="works/HS BUILDING/2nd FLOOR.jpg"
+								 data-csize="300px"
+								 alt="2nd Floor"/>
+							<img src="works/HS BUILDING/thumb/3rd FLOOR.jpg"
+								 data-src="works/HS BUILDING/3rd FLOOR.jpg"
+								 data-csize="300px"
+								 alt="3rd &amp; 4th Floor"/>
+							<img src="works/HS BUILDING/thumb/5th FLOOR.jpg"
+								 data-src="works/HS BUILDING/5th FLOOR.jpg"
+								 data-csize="300px"
+								 alt="5th Floor"/>
+							
+							<img src="works/HS BUILDING/thumb/Roof Floor.jpg"
+								 data-src="works/HS BUILDING/Roof Floor.jpg"
+								 data-csize="300px"
+								 alt="Roof Floor"/>
+							
+							<img src="works/HS BUILDING/thumb/RENDER_1 - Photo.jpg"
+								 data-src="works/HS BUILDING/RENDER_1 - Photo.jpg"
+								 alt="Perspective View"/>
+							<img src="works/HS BUILDING/thumb/RENDER_2 - Photo.jpg"
+								 data-src="works/HS BUILDING/RENDER_2 - Photo.jpg"
+								 alt="Perspective View"/>
+							<img src="works/HS BUILDING/thumb/RENDER_3 - Photo.jpg"
+								 data-src="works/HS BUILDING/RENDER_3 - Photo.jpg"
+								 alt="Perspective View"/>
+							<img src="works/HS BUILDING/thumb/RENDER_4 - Photo.jpg"
+								 data-src="works/HS BUILDING/RENDER_4 - Photo.jpg"
+								 alt="Perspective View"/>
+							<img src="works/HS BUILDING/thumb/RENDER_5 - Photo.jpg"
+								 data-src="works/HS BUILDING/RENDER_5 - Photo.jpg"
+								 alt="Perspective View"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- NEOT-SHAMIR -->
+		<section class="section works" data-anchor="NEOT-SHAMIR">
+			<div class="slide">
+				<div class="center relative">
+					<div class="projectTitle">
+						<h1>Neot Shamir</h1>
+						<h3>Educational Buildings</h3>
+						<div class="btn view-right"><a href="#">View More</a></div>
+					</div>
+				</div>
+				<video muted loop disablepictureinpicture class="vidBack" data-autoplay playsinline autoplay poster="works/NEOT SHAMIR/Video/Poster.jpg">
+					<source data-src="works/NEOT SHAMIR/Video/Video.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="slide">
+				<div class="center relative white">
+					<div class="project" id="prj-neot-shamir">
+						<div class="projectTop">
+							<div class="projectText">
+								<div class="textTitle">
+									<h1>Neot Shamir</h1>
+									<h3>Educational Buildings</h3>
+									<span class="credit">
+										Client: Yavne Municipality, Israel.<br/>
+										Project leader: Arch. Alessya Tonetti, Arch. Batia Melloul.<br>
+										Studio: Bea Architects &amp; Town Planners, 2017<br/>
+									</span>
+								</div>
+								<div class="textScroll">
+									<p>Since 2010, Yavne has seen a substantial influx of positive migration. Joined primarily by young famillies, it has been one of Israel's top growing cities, and is set to face significant infrastructure challenges in the near future.</p>
+									
+									<p>Our studio was asked to participate in an invite-only competition for the planning of multiple educational buildings and their urban layout (3,400 sqm) in Neot Shamir, Yavne, Israel. The buildings' programs included an 18-classroom elementary school and a 5-classroom kindergarten cluster.</p>
+					
+									<p>As a member of the design team led I had an integral role in the planning &amp; design process for the 18-class elementary school, which our studio was later granted to fully plan and is currently being built.</p>
+								</div>
+							</div>
+							<div class="mediaMain">
+								<video preload="none" controls="" poster="works/NEOT SHAMIR/Video/Poster.jpg" class="vidFull">
+									<source src="https://www.googleapis.com/drive/v3/files/13TgAT7oYSrYRoiLoMX9lrt568PyVHEJ1?alt=media&amp;key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div id="gal-neot-shamir" class="projectGallery">
+							<img class="projPres" src="assets/images/Presentation.jpg" data-src="assets/images/Presentation.jpg" 
+										 alt="Project Presentation" 
+										 data-iframe="https://docs.google.com/presentation/d/e/2PACX-1vQNOcLdQVfqCqtdfeDMDS6iRFCInLql7snCJhZkmLVPFJPlIpzxr4hSh4TXq29s2wJqP05nA-njlA1X/embed?start=false&loop=false&delayms=2000&hl=en"/>
+							
+							<img src="works/NEOT SHAMIR/thumb/FENCE-BUILDING.jpg"
+								 data-src="works/NEOT SHAMIR/FENCE-BUILDING.jpg"
+								 alt="Kindergarden"/>
+							<img src="works/NEOT SHAMIR/thumb/gan_int.jpg"
+								 data-src="works/NEOT SHAMIR/gan_int.jpg"
+								 alt="Kindergarden Interior"/>
+							<img src="works/NEOT SHAMIR/thumb/GAN-FRONT-VIEW3.jpg"
+								 data-src="works/NEOT SHAMIR/GAN-FRONT-VIEW3.jpg"
+								 alt="Kindergarden"/>
+							
+							<img src="works/NEOT SHAMIR/thumb/School Entrance.jpg"
+								 data-src="works/NEOT SHAMIR/School Entrance.jpg"
+								 alt="School Entrance"/>
+							<img src="works/NEOT SHAMIR/thumb/school-in-3.jpg"
+								 data-src="works/NEOT SHAMIR/school-in-3.jpg"
+								 alt="School Interior"/>
+							<img src="works/NEOT SHAMIR/thumb/school-park.jpg"
+								 data-src="works/NEOT SHAMIR/school-park.jpg"
+								 alt="School Layout"/>
+							<img src="works/NEOT SHAMIR/thumb/Kindergarten_section_1-10-03.jpg"
+								 data-src="works/NEOT SHAMIR/Kindergarten_section_1-10-03.jpg"
+								 alt="Kindergarden Section"/>
+							<img src="works/NEOT SHAMIR/thumb/section_1-500-02.jpg"
+								 data-src="works/NEOT SHAMIR/section_1-500-02.jpg"
+								 alt="School Section"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+	
 </div>
 
-<!-- BG -->
-<div id="bg"></div>
+<!-- /Sections --> 
 
+<div id="hiddenMenu" style="display:none;">
+	<div title="ABOUT" data-target="1,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/About.jpg')"></div>
+	</div>
+	<div title="ANIMISM" data-target="2,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/ANIMISM.jpg')"></div>
+	</div>
+	<div title="#MeetWENDY" data-target="3,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/WENDY.jpg')"></div>
+	</div>
+	<div title="EVO" data-target="4,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/EVO.jpg')"></div>
+	</div>
+	<div title="EAAA" data-target="5,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/EAAA.jpg')"></div>
+	</div>
+	<div title="MIST" data-target="6,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/MIST.jpg')"></div>
+	</div>
+	<div title="UMAGUTI" data-target="7,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/UMAGUTI.jpg')"></div>
+	</div>
+	<div title="CLEAR STUDIO" data-target="8,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/CLEAR_STUDIO.jpg')"></div>
+	</div>
+	<div title="HS BUILDING" data-target="9,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/HS_BUILDING.jpg')"></div>
+	</div>
+	<div title="NEOT SHAMIR" data-target="10,1">
+		<div class="menuItem" style="background-image: url('assets/images/menu/NEOT_SHAMIR.jpg')"></div>
+	</div>
+</div>
+	
 <!-- Scripts --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script> 
-<script src="assets/js/breakpoints.min.js"></script> 
-<script src="assets/js/util.js"></script> 
-<script src="assets/js/jquery.backgroundSize.js"></script>
-	<script>
-	var webpMachine = new webpHero.WebpMachine()
-	webpMachine.polyfillDocument()
-</script>
-<script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
-<script src="assets/lightSlider/js/lightslider.js"></script> 
-<script src="assets/js/jquery.fancybox.min.js"></script>
-<script src="assets/js/main.js"></script> 
-<script src="assets/js/table.js"></script> 
-<script src="assets/js/portfolio.js"></script> 
-<script src="assets/js/randomquote.js"></script>
+
+	<!-- Jquery --> 
+	<script src="http://code.jquery.com/jquery-3.5.1.js" 
+					integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+					crossorigin="anonymous"></script> 
+
+	<!-- FullPage --> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js" integrity="sha512-XOpdFagEEv9XMxN/2EdvFL/PfGtFDjX+AkRznsFHDtdC05YWdkMnz5JZUfrbnEabOQaMc7YNTl2xPbOu3J858Q==" crossorigin="anonymous"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/scrolloverflow.min.js" 
+					integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" 
+					crossorigin="anonymous"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.extensions.min.js" 
+					integrity="sha512-pci5WG2+7QnpsinWWpGUd3RgI61fU1bWlQQQegC2mVqwOQC/+Xp0ROGO0AYB6dvoLBYRxwm+t+DWOVRkxmlcdQ==" 
+					crossorigin="anonymous"></script> 
+	<!-- Fancy Box --> 
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> 
+
+	<!-- Media Element --> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js" integrity="sha512-MgxzaA7Bkq7g2ND/4XYgoxUbehuHr3Q/bTuGn4lJkCxfxHEkXzR1Bl0vyCoHhKlMlE2ZaFymsJrRFLiAxQOpPg==" crossorigin="anonymous"></script> 
+
+	<!-- Full Screen --> 
+
+	<!-- Gallery --> 
+	<script src="assets/js/gallery.js"></script> 	
+
+	<!-- Main Script --> 
+	<script src="assets/js/main.js"></script> 
+
+	<!-- About --> 
+	<script type="module" src="assets/js/about.js"></script> 
+
+	<!-- Touch Events to Mouse --> 
+	<!--<script src="assets/js/conTouch.js"></script>-->
+
+<!-- /Scripts -->
+
 </body>
 </html>
