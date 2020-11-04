@@ -1207,6 +1207,10 @@ section.active div.projectTitle {
 }
 #logo {
 	mix-blend-mode: difference !important;
+	-moz-transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-ms-transition: all 0.7s ease;
+	transition: all 0.7s ease;
 }
 #logoWrap {
 	background-color: white;

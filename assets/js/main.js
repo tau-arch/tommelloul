@@ -84,7 +84,7 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var startVal = !shrink ? target.outerHeight() / logoWrap.outerHeight() : 1;
 		var destVal = !shrink ? 1 : target.outerHeight() / logoWrap.outerHeight();
 		
-		var appnd = !shrink ? '#logoWrap' : '#menuLogo > a';
+		var appnd = !shrink ? 'body' : '#menuLogo > a';
 		
 		var clsMenuRem = !shrink ? '' : 'nopointer';
 		var clsMenuAdd = !shrink ? 'nopointer' : '';
@@ -92,45 +92,25 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var clsLogoRem = !shrink ? 'active' : '';
 		var clsLogoAdd = !shrink ? '' : 'active';
 		
-		var wait = !shrink ? 0 : 550;
+		var wait = 700;
 		
 		if (shrink == 'resize') {
 			logo.css({'position': 'absolute', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')' });
 			return;
 		}
 		
-		logo.css({ 'z-index': '99999999', 'position': 'absolute', 'top': startOffsetTop, 'left': startOffsetLeft });
-		logo.prependTo('body');
-		$({xScale: startVal}).animate(
-			{
-				xScale: destVal
-			},
-			{
-				duration: $isMobile || first ? 700 : 1100, queue: false,
-				step: function(now,fx) {
-					logo.css('transform','scale('+now+')');  
-				}
-			}
-		);
-		logo.animate(
-			{
-				top: shrink && !$isMobile && !first ? desOffsetTop + $(window).height() : desOffsetTop,
-				left: desOffsetLeft
-			},
-			{
-				duration: $isMobile || first ? 700 : 1100, queue: false,
-				done: function() {
-					//logo.prependTo(appnd);
-					logo.prependTo(appnd).css({'top': desOffsetTop, 'left': desOffsetLeft});
-					if (!shrink) {
-						logo.css({'transform': 'unset', 'top': 'unset', 'left': 'unset'}); logo.css({'position': 'relative', 'z-index': '2'}); 
-					}
-				}
-			}
-		);	
+		if (first == 'start') {
+			logo.css({'position': 'fixed', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')' });
+			logo.appendTo('body');
+			return;
+		}
+		
+		logo.css({ 'z-index': '99999999', 'position': 'fixed', 'top': startOffsetTop, 'left': startOffsetLeft });
+		logo.css({'transform': 'scale('+destVal+')', top: desOffsetTop, left: desOffsetLeft})
 		$('#menuLogo').removeClass(clsMenuRem).addClass(clsMenuAdd);
 		window.setTimeout(function () {
 			$('#menu').removeClass(clsLogoRem).addClass(clsLogoAdd);
+			logo.appendTo(appnd);
 		}, wait);
 		
 	}
@@ -381,6 +361,7 @@ $(document).ready(function() {
 		//if ($isMobile) { openFullscreen(); }
         window.setTimeout(function () {
             $('body').removeClass('is-preload');
+			relocateOnce(false, 'start');
         }, 100);
     });
 	
@@ -398,6 +379,8 @@ $(document).ready(function() {
 		}
 		
 		updateMainMedia();
+		
+
 		
 		$('.expandable > div').each(function() {
 			$(this).css('--origHeight', this.scrollHeight);
@@ -558,8 +541,7 @@ $(document).ready(function() {
 		if (curSlide < 1) {
 			$.fn.fullpage.setAutoScrolling(true);
 			fullpage_api.setAllowScrolling(true);
-			$('html').removeClass('hideScroll');		
-			
+			$('html').removeClass('hideScroll');
 		}
 		else if (!isMenuClick) {
 			$.fn.fullpage.setAutoScrolling(false);
