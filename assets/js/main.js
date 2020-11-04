@@ -60,9 +60,10 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 
 
 	// Move logo and menu on scroll
-	function relocateOnce(shrink) {
+	function relocateOnce(shrink, first) {
 		
 		shrink = shrink || false;
+		first = first || false;
 		
 		var logo = $('#logo');
 		var logoWrap = $('#logoWrap');
@@ -74,8 +75,8 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var targetW = target.outerWidth();
 
 		
-		var desOffsetTop = !shrink ? $(window).height()/2 -logoWrapH/2 : target.offset().top - logoWrapH/2 + targetH/2;
-		var desOffsetLeft = !shrink ? $(window).width()/2 -logoWrapW/2 : target.offset().left - logoWrapW/2 + targetW/2;
+		var desOffsetTop = !shrink ? $(window).height()/2 - logoWrapH/2 : target.offset().top  - logoWrapH/2 + targetH/2;
+		var desOffsetLeft = !shrink ? $(window).width()/2 -logoWrapW/2 - $(window).scrollLeft() : target.offset().left - $(window).scrollLeft() - logoWrapW/2 + targetW/2;
 		
 		var startOffsetTop = !shrink ? target.offset().top - logoWrapH/2 + targetH/2 : $(window).height()/2 -logoWrapH/2;
 		var startOffsetLeft = !shrink ? target.offset().left - logoWrapW/2 + targetW/2 : $(window).width()/2 -logoWrapW/2;
@@ -105,7 +106,7 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 				xScale: destVal
 			},
 			{
-				duration: 700, queue: false,
+				duration: $isMobile || first ? 700 : 1100, queue: false,
 				step: function(now,fx) {
 					logo.css('transform','scale('+now+')');  
 				}
@@ -113,13 +114,14 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		);
 		logo.animate(
 			{
-				top: desOffsetTop,
+				top: shrink && !$isMobile && !first ? desOffsetTop + $(window).height() : desOffsetTop,
 				left: desOffsetLeft
 			},
 			{
-				duration: 700, queue: false,
+				duration: $isMobile || first ? 700 : 1100, queue: false,
 				done: function() {
-					logo.prependTo(appnd);
+					//logo.prependTo(appnd);
+					logo.prependTo(appnd).css({'top': desOffsetTop, 'left': desOffsetLeft});
 					if (!shrink) {
 						logo.css({'transform': 'unset', 'top': 'unset', 'left': 'unset'}); logo.css({'position': 'relative', 'z-index': '2'}); 
 					}
@@ -241,7 +243,7 @@ $(document).ready(function() {
 		autoScrolling: true,
 		fitToSection: false,
 		fitToSectionDelay: 1000,
-		scrollBar: true,
+		scrollBar: $isMobile ? false : true,
 		easing: 'easeInOutCubic',
 		easingcss3: 'cubic-bezier(0.22, 1, 0.36, 1)',
 		loopBottom: false,
@@ -290,21 +292,17 @@ $(document).ready(function() {
 
 		//events
 		onLeave: function(origin, destination, direction){
-/*			if (origin.index == 0 && destination.index > 0) {
-				$.fn.fullpage.setAutoScrolling(false);
-				$('html').addClass('hideScroll');
-			}*/
+			if (origin.index == 0 && destination.index > 0) {
+				relocateOnce(true);
+			}
+			if (origin.index > 0 && destination.index == 0) {
+				relocateOnce();
+			}
 		},
 		afterLoad: function(origin, destination, direction){
-/*			if (origin = destination) {
-				window.setTimeout(function () {
-					$('video.vidBack').each(function() {
-						var source = $(this).find('Source:first');
-						var dataSrc = source.attr('data-src');
-						source.removeAttr('data-src').attr('src', dataSrc);
-					});
-				}, 200);
-			}*/
+			if (origin = destination && origin > 0) {
+				relocateOnce(true);
+			}
 		},
 		afterRender: function(){
 		},
@@ -355,7 +353,7 @@ $(document).ready(function() {
 					var video = document.getElementById('profileVideo');
 					video.currentTime = 0;
 					if (isMenuClick) { isMenuClick = false; return }
-					else { relocateOnce(true); }
+					else { relocateOnce(true, true); }
 				}
 			}
 			if (origin.index > 0) {
@@ -363,7 +361,7 @@ $(document).ready(function() {
 				$.fn.fullpage.setAutoScrolling(true);
 				fullpage_api.setAllowScrolling(true);
 				if (section.index == 0) {
-					relocateOnce();
+					relocateOnce(false);
 				}
 				return;
 			}
@@ -411,10 +409,10 @@ $(document).ready(function() {
 	// On window Scroll
 	$(window).scroll(function () { 
 
-		if (!stopLogoAnim) {
+/*		if (!stopLogoAnim) {
 			relocateLogo();
 		}
-		else { return; }
+		else { return; }*/
 
 	});
 
@@ -554,12 +552,13 @@ $(document).ready(function() {
 	});
 	$(document).on('afterClose.fb', function( e, instance, slide ) {
 		$('#menu').css('z-index', '2');
+		$('#hiddenMenu').removeClass('visibleMenu');
 		var curSection = fullpage_api.getActiveSection().index + 1;
 		var curSlide = fullpage_api.getActiveSlide().index;
 		if (curSlide < 1) {
 			$.fn.fullpage.setAutoScrolling(true);
 			fullpage_api.setAllowScrolling(true);
-			$('html').removeClass('hideScroll');
+			$('html').removeClass('hideScroll');		
 			
 		}
 		else if (!isMenuClick) {

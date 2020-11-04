@@ -271,36 +271,41 @@ function init() {
 			}
 		} );
 
-		const mat = new THREE.ShaderMaterial({
-			extensions: {
-				derivatives: "#extension GL_OES_standard_derivatives : enable"
-			},
-
-			uniforms: uniforms,
-			vertexShader: s.vs,
-			fragmentShader: s.fs
-		});
-
-		const texture = new THREE.TextureLoader().load( "assets/textures/spark1.png" );
-		const material = new THREE.PointsMaterial( {
-			//alphaMap: texture,
-			color: 0x555555,
-			size: 0.25,
-			transparent: true,
-			sizeAttenuation: true,
-			alphaTest: 0.1
-		 } );
-		
+	
 		positions = combineBuffer(gltf, "position");
 
 		const geo = new THREE.BufferGeometry();
 		geo.setAttribute("position", positions);
+		
+		var material;
+		const texture = new THREE.TextureLoader().load( "assets/textures/spark1.png" );
+
+		if ($isMobile) {
+			material = new THREE.PointsMaterial( {
+				color: 0x555555,
+				size: 0.25,
+				transparent: true,
+				sizeAttenuation: true,
+				alphaTest: 0.1
+			});
+		}
+		else {
+			material = new THREE.ShaderMaterial({
+				extensions: {
+					derivatives: "#extension GL_OES_standard_derivatives : enable"
+				},
+
+				uniforms: uniforms,
+				vertexShader: s.vs,
+				fragmentShader: s.fs
+			});
+			geo.attributes.position.setUsage(THREE.DynamicDrawUsage);
+		}
 
 		geo.computeBoundingBox();
-		geo.attributes.position.setUsage(THREE.DynamicDrawUsage);
 		geo.rotateX(-Math.PI * 0.5);
 		
-		modelMesh = $isMobile ? new THREE.Points(geo, material) : new THREE.Points(geo, mat);
+		modelMesh = new THREE.Points(geo, material);
 		modelMesh.position.set(0, -554.8, 0);
 		scene.add(modelMesh);
 
