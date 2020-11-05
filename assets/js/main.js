@@ -15,6 +15,11 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     $isMobile = true;
 }
 
+var hash = window.location.hash; //gets everything after the hashtag i.e. #home
+var startHash = false;
+if (hash != '#home' && hash.length > 0) {
+     startHash = true;
+}
 
 var prevScroll = 0;
 var stopLogoAnim = false;
@@ -25,6 +30,7 @@ var pausedVids = [];
 var noClick = false;
 
 var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2, titleHrz, titleVrt, titleWrap;
+
 
 
 // Functions
@@ -61,10 +67,9 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 
 	// Move logo and menu on scroll
 	function relocateOnce(shrink, first) {
-		
 		shrink = shrink || false;
 		first = first || false;
-		
+
 		var logo = $('#logo');
 		var logoWrap = $('#logoWrap');
 		var target = $('#targetO');
@@ -277,6 +282,14 @@ $(document).ready(function() {
 
 		//events
 		onLeave: function(origin, destination, direction){
+            var params = {
+                origin: origin,
+                destination: destination,
+                direction: direction
+            };
+            console.log("--- onLeave ---");
+            console.log(params);
+			
 			if (origin.index == 0 && destination.index > 0) {
 				relocateOnce(true);
 			}
@@ -285,9 +298,13 @@ $(document).ready(function() {
 			}
 		},
 		afterLoad: function(origin, destination, direction){
-			if (origin = destination && origin > 0) {
-				relocateOnce(true);
-			}
+            var params = {
+                origin: origin,
+                destination: destination,
+                direction: direction
+            };
+            console.log("--- afterLoad ---");
+            console.log(params);
 		},
 		afterRender: function(){
 		},
@@ -329,6 +346,15 @@ $(document).ready(function() {
 			}
 		},
 		onSlideLeave: function(section, origin, destination, direction){
+            var params = {
+                section: section,
+                origin: origin,
+                destination: destination,
+                direction: direction
+            };
+            console.log("--- onSlideLeave ---");
+            console.log(params);
+			
 			noClick = true;
 			window.setTimeout(function () {
 				noClick = false;
@@ -366,11 +392,19 @@ $(document).ready(function() {
 // Events
 	// On page load
     $(window).on('load', function () {
+		
 		//if ($isMobile) { openFullscreen(); }
         window.setTimeout(function () {
             $('body').removeClass('is-preload');
 			relocateOnce(false, 'start');
-        }, 100);
+        }, 20);
+        if (startHash) {
+			window.setTimeout(function () {
+				$('body').removeClass('is-preload');
+				relocateOnce(true);
+				startHash = false;
+			}, 23);
+		}
     });
 	
 
