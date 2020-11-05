@@ -914,13 +914,7 @@ li {
 #header > h4 {
 	margin-top: calc(var(--tSize)*1) !important;
 }
-html body [data-ca3_iconfont="ETmodules"]::before {
-	font-family: "ETmodules";
-}
-[data-ca3_icon]::before {
-	font-weight: normal;
-	content: attr(data-ca3_icon);
-}
+
 .ca3-scroll-down-arrow {
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCINCgkgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMzMzMzMzO3N0cm9rZS13aWR0aDowLjg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCjwvc3R5bGU+DQo8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSIxLjksNi40IDEwLDE0LjUgMTguMSw2LjQgIi8+DQo8L3N2Zz4NCg==);
 	background-size: contain;
@@ -935,21 +929,32 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 	margin: 0px 0 0 0;
 	line-height: var(--arrowSize);
 	left: calc(25% - var(--arrowSize)/2);
-	bottom: calc(var(--arrowSize)/4);
+	bottom: min(var(--arrowSize), 8vh);
 	color: #000;
 	text-align: center;
 	font-size: var(--arrowSize);
 	z-index: 100;
 	text-decoration: none;
-	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+	
 	-webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
 	-moz-animation: ca3_fade_move_down 2s ease-in-out infinite;
 	animation: ca3_fade_move_down 2s ease-in-out infinite;
 	
+	
+	
 	position:absolute;
 	z-index:9999999999999999999;	
 }
-
+.ca3-scroll-down-link:before {
+	content: 'WORKS';
+	font-size: max(calc(var(--tSize)*1.5), 0.7rem);
+	text-transform: uppercase;
+	top: 0.5rem;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	white-space: nowrap;
+}
 
 /*animated scroll arrow animation*/
 @-webkit-keyframes ca3_fade_move_down {
@@ -1206,15 +1211,15 @@ section.active div.projectTitle {
 	transform: translateX(0);
 }
 #logo {
+	--transTime: 1100;
 	mix-blend-mode: difference !important;
-	-moz-transition: all 0.7s ease;
-	-webkit-transition: all 0.7s ease;
-	-ms-transition: all 0.7s ease;
-	transition: all 0.7s ease;
+	-moz-transition: all calc(var(--transTime) * 1ms) ease;
+	-webkit-transition: all calc(var(--transTime) * 1ms) ease;
+	-ms-transition: all calc(var(--transTime) * 1ms) ease;
+	transition: all calc(var(--transTime) * 1ms) ease;
+	transform-origin: 50 50%;
 }
-#logoWrap {
-	background-color: white;
-}
+
 #header > div.center {
 	pointer-events: none;
 }

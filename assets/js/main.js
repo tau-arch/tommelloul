@@ -68,15 +68,15 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var logo = $('#logo');
 		var logoWrap = $('#logoWrap');
 		var target = $('#targetO');
+		var header = $('#header');
 		
 		var logoWrapH = logoWrap.outerHeight();
 		var logoWrapW = logoWrap.outerWidth();
 		var targetH = target.outerHeight();
 		var targetW = target.outerWidth();
 
-		
 		var desOffsetTop = !shrink ? $(window).height()/2 - logoWrapH/2 : target.offset().top  - logoWrapH/2 + targetH/2;
-		var desOffsetLeft = !shrink ? $(window).width()/2 -logoWrapW/2 - $(window).scrollLeft() : target.offset().left - $(window).scrollLeft() - logoWrapW/2 + targetW/2;
+		var desOffsetLeft = !shrink ? $(window).width()/2 -logoWrapW/2 : target.offset().left - logoWrapW/2 + targetW/2;
 		
 		var startOffsetTop = !shrink ? target.offset().top - logoWrapH/2 + targetH/2 : $(window).height()/2 -logoWrapH/2;
 		var startOffsetLeft = !shrink ? target.offset().left - logoWrapW/2 + targetW/2 : $(window).width()/2 -logoWrapW/2;
@@ -84,7 +84,8 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var startVal = !shrink ? target.outerHeight() / logoWrap.outerHeight() : 1;
 		var destVal = !shrink ? 1 : target.outerHeight() / logoWrap.outerHeight();
 		
-		var appnd = !shrink ? 'body' : '#menuLogo > a';
+		var appnd = !shrink ? '#fullpage' : '#menuLogo > a';
+		var stroke = !shrink ? '#333' : '';
 		
 		var clsMenuRem = !shrink ? '' : 'nopointer';
 		var clsMenuAdd = !shrink ? 'nopointer' : '';
@@ -92,25 +93,29 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var clsLogoRem = !shrink ? 'active' : '';
 		var clsLogoAdd = !shrink ? '' : 'active';
 		
-		var wait = 700;
+		var wait = $isMobile ? 500 : 1100;
 		
-		if (shrink == 'resize') {
-			logo.css({'position': 'absolute', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')' });
+		if (first == 'resize') {
+			logo.css({'--transTime': 0, 'z-index': '1', 'position': 'absolute', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')'});
+			logo.prependTo('#fullpage');
 			return;
 		}
 		
 		if (first == 'start') {
-			logo.css({'position': 'fixed', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')' });
-			logo.appendTo('body');
+			logo.css({'z-index': '1', 'position': 'absolute', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')' });
+			logo.prependTo('#fullpage');
+			$('svg.svgArrow polyline.menuLine').css('stroke', '#333');
 			return;
 		}
 		
-		logo.css({ 'z-index': '99999999', 'position': 'fixed', 'top': startOffsetTop, 'left': startOffsetLeft });
+		$('svg.svgArrow polyline.menuLine').css('stroke', stroke);
+		logo.css({'z-index': '999999999999', 'position': 'fixed', 'top': startOffsetTop, 'left': startOffsetLeft, '--transTime': wait});
 		logo.css({'transform': 'scale('+destVal+')', top: desOffsetTop, left: desOffsetLeft})
 		$('#menuLogo').removeClass(clsMenuRem).addClass(clsMenuAdd);
 		window.setTimeout(function () {
+			logo.css({'z-index': '1'});
 			$('#menu').removeClass(clsLogoRem).addClass(clsLogoAdd);
-			logo.appendTo(appnd);
+			logo.prependTo(appnd);
 		}, wait);
 		
 	}
@@ -294,11 +299,14 @@ $(document).ready(function() {
 			updateMainMedia();
 			
 			if ($('.section').index(curSection) == 0 && $('.section.active .slide').index(curSlide) == 1) {
-				relocateOnce('resize');
+				relocateOnce(true, 'resize');
+			}
+			if ($('.section').index(curSection) == 0 && $('.section.active .slide').index(curSlide) == 0) {
+				relocateOnce(false, 'resize');
 			}
 			else {
 				stopLogoAnim = true;
-				relocateLogo('resize');
+				relocateOnce(true, 'resize');
 				setTimeout(function() {
 					stopLogoAnim = false;
 				}, 500);
