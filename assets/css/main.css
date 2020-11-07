@@ -1777,3 +1777,33 @@ span.strong {
 canvas {
 	filter: none !important;
 }
+
+.contact-icons {
+	font-size: max(calc(var(--tSize)*3.5), 1.5rem);
+	line-height: max(calc(var(--tSize)*4), 1.6rem);
+	padding: 0.26rem;
+}
+.contact-icons:first-of-type {
+	margin-left: -0.2rem;
+}
+
+.contact-icons > * {
+	
+	transform: scale(1.00);
+	color: rgba(0,0,0,0.7) !important;
+	
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.contact-icons:hover > * {
+	transform: scale(1.10);
+	color: rgba(0,0,0,1) !important;
+}
+#sectionFooter {
+	padding: 0.5rem 1rem !important;
+}
+#sectionFooter, #sectionFooter * {
+    height: unset !important;
+}

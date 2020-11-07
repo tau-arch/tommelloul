@@ -232,6 +232,8 @@ div.textScroll {
 		text-align: center;
 }
 .expandable.collapsable div {
+	margin-top: 0.5rem;
+	margin-bottom: 0.8rem;
 	max-height:  calc(var(--origHeight) * 1px);
 	opacity: 1;
 	overflow: hidden;

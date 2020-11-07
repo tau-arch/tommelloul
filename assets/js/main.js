@@ -282,14 +282,6 @@ $(document).ready(function() {
 
 		//events
 		onLeave: function(origin, destination, direction){
-            var params = {
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-            console.log("--- onLeave ---");
-            console.log(params);
-			
 			if (origin.index == 0 && destination.index > 0) {
 				relocateOnce(true);
 			}
@@ -298,13 +290,6 @@ $(document).ready(function() {
 			}
 		},
 		afterLoad: function(origin, destination, direction){
-            var params = {
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-            console.log("--- afterLoad ---");
-            console.log(params);
 		},
 		afterRender: function(){
 		},
@@ -346,15 +331,7 @@ $(document).ready(function() {
 			}
 		},
 		onSlideLeave: function(section, origin, destination, direction){
-            var params = {
-                section: section,
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-            console.log("--- onSlideLeave ---");
-            console.log(params);
-			
+		
 			noClick = true;
 			window.setTimeout(function () {
 				noClick = false;
@@ -416,9 +393,9 @@ $(document).ready(function() {
 		relocateLogo(true);
 		$('.fp-controlArrow').append("<svg class='svgArrow' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20%' height='80%' viewBox='0 0 50 80' preserveAspectRatio='none' xml:space='preserve'><polyline class='menuLine' points='0.375,0.375 45.63,38.087 0.375,75.8 '></polyline></svg>");
 		
-		if (!$isMobile) {
-			$('.expandable:first-of-type').addClass('collapsable');
-		}
+//		if (!$isMobile) {
+//			$('.expandable:first-of-type').addClass('collapsable');
+//		}
 		
 		updateMainMedia();
 		
@@ -545,6 +522,11 @@ $(document).ready(function() {
 	$('.expandable > *:first-child').on('click touch', function(e) {
 		if (noClick) { return; }
 		e.preventDefault();
+		var nextDiv = $(this).siblings()[0];
+		window.setTimeout(function () {
+			$(nextDiv).css('--origHeight', nextDiv.scrollHeight);
+			console.log(nextDiv.scrollHeight);
+		}, 50);
 		if (!$(this).parent().hasClass('collapsable')) {
 			$(this).parent().addClass('collapsable');
 			$(this).parent().siblings().removeClass('collapsable');

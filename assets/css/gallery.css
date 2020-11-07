@@ -752,3 +752,8 @@ video.vidFull {
   border: none;
   clip-path: inset(0.85% 3px 3px 0);
 }
+
+
+projectGallery > *:not(figure) {
+	display: none;
+}
