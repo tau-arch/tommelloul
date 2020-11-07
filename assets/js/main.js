@@ -526,7 +526,7 @@ $(document).ready(function() {
 		window.setTimeout(function () {
 			$(nextDiv).css('--origHeight', nextDiv.scrollHeight);
 			console.log(nextDiv.scrollHeight);
-		}, 50);
+		}, 150);
 		if (!$(this).parent().hasClass('collapsable')) {
 			$(this).parent().addClass('collapsable');
 			$(this).parent().siblings().removeClass('collapsable');
