@@ -73,15 +73,19 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var logo = $('#logo');
 		var logoWrap = $('#logoWrap');
 		var target = $('#targetO');
-		var header = $('#header');
+
 		
 		var logoWrapH = logoWrap.outerHeight();
 		var logoWrapW = logoWrap.outerWidth();
 		var targetH = target.outerHeight();
 		var targetW = target.outerWidth();
+		
+		var vw = $(window).width() / 100;
+		var vh = $(window).height() / 100;
+		var tSize = (window.innerHeight > window.innerWidth) ? 1.05 * vw : 0.9 * vh;
 
-		var desOffsetTop = !shrink ? $(window).height()/2 - logoWrapH/2 : target.offset().top  - logoWrapH/2 + targetH/2;
-		var desOffsetLeft = !shrink ? $(window).width()/2 -logoWrapW/2 : target.offset().left - logoWrapW/2 + targetW/2;
+		var desOffsetTop = !shrink ? $(window).height()/2 - logoWrapH/2 : (tSize * 0.5)  - logoWrapH/2 + targetH/2;
+		var desOffsetLeft = !shrink ? $(window).width()/2 -logoWrapW/2 : (tSize * 1.8) - logoWrapW/2 + targetW/2;
 		
 		var startOffsetTop = !shrink ? target.offset().top - logoWrapH/2 + targetH/2 : $(window).height()/2 -logoWrapH/2;
 		var startOffsetLeft = !shrink ? target.offset().left - logoWrapW/2 + targetW/2 : $(window).width()/2 -logoWrapW/2;
@@ -98,11 +102,11 @@ var titleText, titleVrtStart, titleVrtEnd, titleVrtEnding, titleVrtP, titleVrtP2
 		var clsLogoRem = !shrink ? 'active' : '';
 		var clsLogoAdd = !shrink ? '' : 'active';
 		
-		var wait = $isMobile ? 500 : 1100;
+		var wait = $isMobile ? 350 : 800;
 		
 		if (first == 'resize') {
-			logo.css({'--transTime': 0, 'z-index': '1', 'position': 'absolute', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')'});
-			logo.prependTo('#fullpage');
+			logo.css({'--transTime': 0, 'z-index': '1', 'position': 'fixed', 'top': desOffsetTop, 'left': desOffsetLeft, 'transform': 'scale(' + destVal + ')'});
+			logo.prependTo(appnd);
 			return;
 		}
 		
@@ -231,8 +235,8 @@ $(document).ready(function() {
 		css3: true,
 		scrollingSpeed: 700,
 		autoScrolling: true,
-		fitToSection: false,
-		fitToSectionDelay: 1000,
+		fitToSection: true,
+		fitToSectionDelay: 50,
 		scrollBar: $isMobile ? false : true,
 		easing: 'easeInOutCubic',
 		easingcss3: 'cubic-bezier(0.22, 1, 0.36, 1)',
@@ -438,7 +442,7 @@ $(document).ready(function() {
 		
 		setTimeout(function() {
 			var curSection = fullpage_api.getActiveSection().index + 1;
-			var curSlide = fullpage_api.getActiveSlide().index;
+			var curSlide = fullpage_api.getActiveSlide() ? fullpage_api.getActiveSlide().index : 0;
 			if (curSection == 1 && curSlide == 0) { relocateOnce(); }
 			if (curSection > 0) {
 				if (curSlide > 0) {
