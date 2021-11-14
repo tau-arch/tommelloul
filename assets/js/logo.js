@@ -58,7 +58,7 @@ function init() {
 	};
 	
 	var loader = new GLTFLoader(manager);
-	loader.load('assets/models/logo.glb', function( gltf ) {
+	loader.load('https://www.googleapis.com/drive/v3/files/1H6odDqysBQJwavd3EOKbapFAcDp66MnH?alt=media&key=AIzaSyB6HWp-uoHRYWL8J5u1SaLOAK52hmS5zBo', function( gltf ) {
 
 		var object = gltf.scene.children[0];
 
