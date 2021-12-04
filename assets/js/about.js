@@ -235,12 +235,9 @@ function init() {
 	scene = new THREE.Scene();	
 	clock = new THREE.Clock();
 
-	var modifier = new SubdivisionModifier(subdivisions, true);
-	
-
 	manager.onLoad = function ( ) {
 
-		console.log( 'Loading complete!');
+		// console.log( 'Loading complete!');
 		$('#logo').addClass('ready');
 		
 	};
@@ -258,27 +255,16 @@ function init() {
 
 	};
 	
-	loader.load('assets/models/logo-final.glb', function( gltf ) {
+	loader.load('assets/models/logo.glb', function( gltf ) {
 
 		var object = gltf.scene.children[0];
 
-		object.traverse( function ( child )	{
-			if ( child instanceof THREE.Mesh )	{
-				var childGeo = modifier.modify(new THREE.Geometry().fromBufferGeometry( child.geometry ));
-				//var childBuffGeo = modifier.modify( childGeo );
-				var childBuffGeo = new THREE.BufferGeometry().fromGeometry( childGeo );	//child.castShadow = true;					
-				child.geometry = childBuffGeo;
-			}
-		} );
-
-	
 		positions = combineBuffer(gltf, "position");
 
 		const geo = new THREE.BufferGeometry();
 		geo.setAttribute("position", positions);
 		
 		var material;
-		const texture = new THREE.TextureLoader().load( "assets/textures/spark1.png" );
 
 		if ($isMobile) {
 			material = new THREE.PointsMaterial( {
