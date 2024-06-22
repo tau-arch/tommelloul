@@ -372,7 +372,7 @@ $(document).ready(function() {
 
 // Events
 	// On page load
-    $(window).on('load', function () {
+    $(window).on('DOMContentLoaded', function () {
 		
 		//if ($isMobile) { openFullscreen(); }
         window.setTimeout(function () {
